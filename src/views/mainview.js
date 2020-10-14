@@ -22,7 +22,7 @@ class MainView extends Component {
 
       return (
 
-        <div className='mainWrapper'>
+        <div className='mainWrapper'> %main html code inside
 
           <Header as="h1" color="red" size="huge">
             Mysteries of Universe
