@@ -28,11 +28,11 @@ class MainView extends Component {
           <div className="centered">Mysteries Of Universe</div>
           <div className="c2">(Oct 23 to Nov 28)</div>
           <div className="arrow bounce start">
-           <a className="fa fa-arrow-down fa-2x" href="#main"></a>
+           <a className="fa fa-arrow-down fa-2x" href="#lecture"></a>
           </div>
         </div>
         
-        <div class="main" id="main">
+        <div class="main">
        <Header as="h1" id="lecture" size="huge">Brief about the lectures </Header>
         <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
           Theoretical High Energy Physics and Cosmology, dubbed as <em>The 
@@ -100,14 +100,7 @@ class MainView extends Component {
               </Card>
             </Card.Group>
           </Container>
-          <div class="footer">
-            Organising teams
-            <p>
-              
-            </p>
           </div>
-          </div>
-          
           
         </div>
       )
