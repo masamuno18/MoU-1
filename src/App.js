@@ -18,9 +18,9 @@ function App () {
     <Router className='App'>
       <div className='App'>
         <div className = "nav">
-          <Container>
+          
             <Navbar/>
-          </Container>
+          
         </div>
 
           <Switch>

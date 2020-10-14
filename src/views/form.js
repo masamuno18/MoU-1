@@ -91,7 +91,9 @@ class Register extends Component {
     } = this.state
 
     return(
-      <div className='form_wrapper'>
+      <div className="pageBG">
+
+        <div className='form_wrapper'>
 
         <Container>
 
@@ -103,11 +105,11 @@ class Register extends Component {
 
 
 
-          <Segment inverted color="black" padded >
+          <Segment color="black" padded >
 
             <Form
             className="form"
-            inverted
+            
             size="huge"
             onSubmit={this.handleSubmit}
             success={submitSuccess}
@@ -173,25 +175,21 @@ class Register extends Component {
                 value={country}
               />
 
-            </Form>
-
-              <Segment inverted>
-                <Button 
-                onClick={this.handleSubmit}
+              <Form.Button 
                 color="green"
                 inverted
                 primary
                 size="large"
                 content = "Submit"
               />
-              </Segment>
-            
-          
 
+            </Form>
           </Segment>
-    
+
         </Container>
+        </div>
       </div>
+      
     )
   }
 }

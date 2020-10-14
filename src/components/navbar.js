@@ -16,13 +16,13 @@ class Navbar extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu attached='top' secondary size='massive' color="red" inverted>
+      <Menu attached='top' secondary size='massive' color="black" inverted>
         
         <Menu.Menu>
           <Link to='/'>
             <Menu.Item
               name='MOU'
-              color='blue'
+              color='grey'
               active={false}
               content='MOU'
               onClick={this.handleItemClick}
@@ -35,7 +35,7 @@ class Navbar extends Component {
           <Link to='/register'>
             <Menu.Item
               name='Register'
-              color='blue'
+              color='grey'
               active={activeItem === 'Register'}
               content='Register'
               onClick={this.handleItemClick}
@@ -45,7 +45,7 @@ class Navbar extends Component {
           <Link to='/attendees'>
             <Menu.Item
               name='Attendees'
-              color='blue'
+              color='grey'
               active={activeItem === 'Attendees'}
               content='Attendees'
               onClick={this.handleItemClick}

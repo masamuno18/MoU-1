@@ -7,4 +7,11 @@
 
 .form{
   text-align: left;
+  padding: 2%;
+}
+
+.pageBG{
+  background-image:url("https://www.nasa.gov/sites/default/files/thumbnails/image/simulated_bh.jpg");
+  width: 100%;
+  height: 100%;
 }
