@@ -26,14 +26,13 @@ class MainView extends Component {
         
         <div className="mainimg">
           <div className="centered">Start</div>
+          
           <div className="arrow bounce start">
            <a className="fa fa-arrow-down fa-2x" href="#lecture"></a>
           </div>
         </div>
 
-          <Header as="h1" color="red" size="huge">
-            Mysteries of Universe
-          </Header>
+          
 
           <Header as="h2" align="left" color="violet" size="medium">Description </Header> <br></br>
 

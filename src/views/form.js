@@ -5,7 +5,8 @@ import {
   Message,
   Container,
   Segment,
-  Button
+  Button,
+  Grid
 } from 'semantic-ui-react'
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
@@ -99,16 +100,20 @@ class Register extends Component {
               Register for the event
             </Header>
           </Segment>
-          
 
-          <Segment inverted color="teal" padded >
+
+
+          <Segment inverted color="black" padded >
 
             <Form
-              size="huge"
-              onSubmit={this.handleSubmit}
-              success={submitSuccess}
-              loading = {isLoading}
+            className="form"
+            inverted
+            size="huge"
+            onSubmit={this.handleSubmit}
+            success={submitSuccess}
+            loading = {isLoading}
             >
+            
               {submitSuccess && (
                 <Message
                   success
@@ -117,74 +122,71 @@ class Register extends Component {
                   content='Your registration has been completed successfully.'
                 />
               )}
-
-              <Form.Group widths='equal'>
-
-                <Form.Input
-                  name='name'
-                  fluid
-                  label='Name'
-                  placeholder='Name'
-                  onChange={this.handleChange}
-                  required
-                  value={name}
-                />
-
-                <Form.Input
-                  name='email'
-                  fluid
-                  label='Email'
-                  placeholder='abc@example.com'
-                  onChange={this.handleChange}
-                  required
-                  value={email}
-                />
-                
-              </Form.Group>
+                    
+              <Form.Input
+                name='name'
+                fluid
+                label='Name'
+                placeholder='Name'
+                onChange={this.handleChange}
+                required
+                value={name}
+              />
 
               <Form.Input
-                  name='institute'
-                  fluid
-                  label='Institute'
-                  placeholder='Current Institute'
-                  onChange={this.handleChange}
-                  required
-                  value={institute}
-                />
+                name='email'
+                fluid
+                label='Email'
+                placeholder='abc@example.com'
+                onChange={this.handleChange}
+                required
+                value={email}
+              />
 
-              <Form.Group widths='equal'>
-              
-                <Form.Input
-                  name='designation'
-                  fluid
-                  label='Designation'
-                  placeholder='Current Designation'
-                  onChange={this.handleChange}
-                  required
-                  value={designation}
-                />
-                <Form.Input
-                  name='country'
-                  fluid
-                  label='Country'
-                  placeholder='Country of residence'
-                  onChange={this.handleChange}
-                  required
-                  value={country}
-                />
-              </Form.Group>
+              <Form.Input
+                name='institute'
+                fluid
+                label='Institute'
+                placeholder='Current Institute'
+                onChange={this.handleChange}
+                required
+                value={institute}
+              />
+            
+              <Form.Input
+                name='designation'
+                fluid
+                label='Designation'
+                placeholder='Current Designation'
+                onChange={this.handleChange}
+                required
+                value={designation}
+              />
 
-                <Button 
-                  onClick={this.handleSubmit}
-                  color="green"
-                  inverted
-                  primary
-                  size="huge"
-                >
-                    Submit
-                </Button>
+              <Form.Input
+                fluid
+                name='country'
+                label='Country'
+                placeholder='Country of residence'
+                onChange={this.handleChange}
+                required
+                value={country}
+              />
 
             </Form>
+
+              <Segment inverted>
+                <Button 
+                onClick={this.handleSubmit}
+                color="green"
+                inverted
+                primary
+                size="large"
+                content = "Submit"
+              />
+              </Segment>
+            
+          
 
           </Segment>
     

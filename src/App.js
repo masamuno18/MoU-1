@@ -22,16 +22,13 @@ function App () {
             <Navbar/>
           </Container>
         </div>
-        
-        <div className="appBody">
+
           <Switch>
             <Route exact path='/' component={MainView} />
             <Route exact path='/register' component={Register} />
             <Route exact path='/attendees' component={Attendees} />
           </Switch>
-        </div>
         
-
       </div>
       
     </Router>

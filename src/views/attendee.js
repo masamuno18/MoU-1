@@ -59,7 +59,7 @@ class Attendees extends Component {
       <Container>
 
         <Segment inverted padded >
-          <Header as='h1' color="green">
+          <Header as='h1' color="grey">
               Event Participants
             </Header>
         </Segment>
@@ -67,7 +67,7 @@ class Attendees extends Component {
         <Loader active={isLoading} inline='centered' />
 
         {!isLoading && 
-        <Table striped inverted color="teal" size="large">
+        <Table striped inverted color="black" size="large" padded stackable>
 
           <Table.Header>
             <Table.Row>
