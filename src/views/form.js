@@ -1,17 +1,21 @@
 import React, { Component } from 'react'
-import axios from 'axios'
 import {
   Form,
-  FormGroup,
   Header,
   Message,
+  Container,
   Segment,
-  Label,
-  Icon,
-  Button,
-  Image,
-  Container
+  Button
 } from 'semantic-ui-react'
+import { GoogleSpreadsheet } from "google-spreadsheet";
+
+import '../styles/form.css'
+
+import {SPREADSHEET_ID, CLIENT_EMAIL, PRIVATE_KEY, SHEET_ID} from "../secrets/secret.js"
+
+const doc = new GoogleSpreadsheet(SPREADSHEET_ID);
+
+
 
 class Register extends Component {
   constructor (props) {
@@ -19,45 +23,59 @@ class Register extends Component {
 
     this.state = {
       submitSuccess: false,
+      isLoading: false,
     }
   }
+  
+  appendSpreadsheet = async (row) => {
+    try {
+      await doc.useServiceAccountAuth({
+        client_email: CLIENT_EMAIL,
+        private_key: PRIVATE_KEY,
+      });
+      // loads document properties and worksheets
+      await doc.loadInfo();
+  
+      const sheet = doc.sheetsById[SHEET_ID];
+      const result = await sheet.addRow(row);
+
+      if (result._rowNumber > 1) {
+        this.setState({submitSuccess: true, isLoading: false})
+        this.setState({name: '', country: '', institute: '', designation: '', email: ''})
+      }
+      
+    } catch (e) {
+      this.setState({isLoading:false})
+      console.error('Error: ', e);
+    }
+  };
 
   handleChange = (event, { name, value }) => {
-    this.setState({ [name]: value }, () => {
-      console.log(this.state.date)
-    })
+    this.setState({ [name]: value })
   }
 
   handleSubmit = e => {
     e.preventDefault()
+    
+    this.setState({isLoading:true})
 
     const {
       name,
       email,
       institute,
       designation,
-      country,
-      submitSuccess
+      country
     } = this.state
 
-    var url = `https://docs.google.com/forms/u/5/d/e/1FAIpQLScT-MwX14ArqVffaEHYH-TtlCTZA9VSfx3R9_070BM12FRzLw/formResponse`
+    var newRow = { 
+      Name: name, 
+      Email: email, 
+      Institute: institute, 
+      Designation: designation, 
+      Country: country 
+    };
 
-    var formData = new FormData()
-    formData.append('entry.1461829831', name)
-    formData.append('entry.236179936', email)
-    formData.append('entry.1585434173', institute)
-    formData.append('entry.131549021', designation)
-    formData.append('entry.79622650', country)
-
-    axios({
-      method: "post",
-      url: url,
-      data: formData,
-      headers: {
-        'Access-Control-Allow-Origin': '*',
-        'Content-Type': 'application/x-www-form-urlencoded',
-      },
-    }).then(response => {console.log(response)})
+    this.appendSpreadsheet(newRow);
   }
 
   render () {
@@ -67,83 +85,109 @@ class Register extends Component {
       institute,
       designation,
       country,
-      submitSuccess
+      submitSuccess,
+      isLoading
     } = this.state
 
     return(
-      <div styleName='main.form_wrapper'>
+      <div className='form_wrapper'>
 
         <Container>
-        <Header as='h2' dividing>
-          Register for the event
-        </Header>
 
-      
-          <Form
-            onSubmit={this.handleSubmit}
-            success={submitSuccess}
-          >
-            {submitSuccess && (
-              <Message
-                success
-                header='Registered successfully!'
-                info
-                content='Your registration has been completed successfully.'
-              />
-            )}
+          <Segment inverted padded >
+          <Header as='h1' color="grey">
+              Register for the event
+            </Header>
+          </Segment>
+          
 
-            <Form.Group widths='equal'>
+          <Segment inverted color="teal" padded >
+
+            <Form
+              size="huge"
+              onSubmit={this.handleSubmit}
+              success={submitSuccess}
+              loading = {isLoading}
+            >
+              {submitSuccess && (
+                <Message
+                  success
+                  header='Registered successfully!'
+                  info
+                  content='Your registration has been completed successfully.'
+                />
+              )}
+
+              <Form.Group widths='equal'>
+
+                <Form.Input
+                  name='name'
+                  fluid
+                  label='Name'
+                  placeholder='Name'
+                  onChange={this.handleChange}
+                  required
+                  value={name}
+                />
+
+                <Form.Input
+                  name='email'
+                  fluid
+                  label='Email'
+                  placeholder='abc@example.com'
+                  onChange={this.handleChange}
+                  required
+                  value={email}
+                />
+                
+              </Form.Group>
+
               <Form.Input
-                name='name'
-                fluid
-                label='Name'
-                placeholder='Name'
-                onChange={this.handleChange}
-                required
-                value={name}
-              />
-              <Form.Input
-                name='institute'
-                fluid
-                label='Institute'
-                placeholder='Current Institute'
-                onChange={this.handleChange}
-                required
-                value={institute}
-              />
+                  name='institute'
+                  fluid
+                  label='Institute'
+                  placeholder='Current Institute'
+                  onChange={this.handleChange}
+                  required
+                  value={institute}
+                />
+
+              <Form.Group widths='equal'>
               
-            </Form.Group>
-            <Form.Group widths='equal'>
-            <Form.Input
-                name='email'
-                fluid
-                label='Email'
-                placeholder='abc@example.com'
-                onChange={this.handleChange}
-                required
-                value={email}
-              />
-              <Form.Input
-                name='designation'
-                fluid
-                label='Designation'
-                placeholder='Current Designation'
-                onChange={this.handleChange}
-                required
-                value={designation}
-              />
-              <Form.Input
-                name='country'
-                fluid
-                label='Country'
-                placeholder='Country of residence'
-                onChange={this.handleChange}
-                required
-                value={country}
-              />
-            </Form.Group>
-            <Form.Button type='Submit'> Submit </Form.Button>
-          </Form>
+                <Form.Input
+                  name='designation'
+                  fluid
+                  label='Designation'
+                  placeholder='Current Designation'
+                  onChange={this.handleChange}
+                  required
+                  value={designation}
+                />
+                <Form.Input
+                  name='country'
+                  fluid
+                  label='Country'
+                  placeholder='Country of residence'
+                  onChange={this.handleChange}
+                  required
+                  value={country}
+                />
+              </Form.Group>
+
+                <Button 
+                  onClick={this.handleSubmit}
+                  color="green"
+                  inverted
+                  primary
+                  size="huge"
+                >
+                    Submit
+                </Button>
+
+            </Form>
+
+          </Segment>
+    
         </Container>
       </div>
     )
