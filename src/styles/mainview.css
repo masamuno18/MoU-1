@@ -17,7 +17,7 @@
 .centered{
   position:absolute;
   font-family: 'Tangerine';
-  top:50%;
+  top:45%;
   left:55%;
   font-size:65px;
   transform:translate(-60%, -50%);
@@ -31,9 +31,17 @@
   position:absolute;
   z-index:1;
   transform:translate(-60%, -50%);
-  top:60%;
+  top:50%;
   right:49.5%;
   color:white;
+}
+.c2{
+  top: 52%;
+  z-index:1;
+  padding-left: 40%;
+  color: white;
+  position: absolute;
+  font-size: 30px;
 }
 
 /*bouncing arrow*/
@@ -89,4 +97,5 @@ a { color: white; text-decoration: none; }
   margin-right: 7%;
   margin-bottom: 5%;
   margin-left: 7%;
+  
 }

@@ -25,7 +25,8 @@ class MainView extends Component {
         <div className='mainWrapper'> 
         
         <div className="mainimg">
-          <div className="centered">Mysteries Of Universe </div>
+          <div className="centered">Mysteries Of Universe</div>
+          <div className="c2">(Oct 23 to Nov 28)</div>
           <div className="arrow bounce start">
            <a className="fa fa-arrow-down fa-2x" href="#lecture"></a>
           </div>
@@ -102,9 +103,11 @@ class MainView extends Component {
           </div>
           
           <div class="footer">
-            Organising team
+            Organising teams
+            <p>
+              
+            </p>
           </div>
-
         </div>
       )
     }
