@@ -45,19 +45,34 @@ class MainView extends Component {
            </p><br></br><br></br>
         
           <Container textAlign="center">
-            <Card.Group textAlign ="center" itemsPerRow="4">
+            <Card.Group textAlign ="center" itemsPerRow="4" stackable>
               <Card
                 meta='Friend'
                 description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
               >
                 <Image src={urlEW} wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Matthew Harris</Card.Header>
-                  <Card.Meta>Co-Worker</Card.Meta>
+                  <Card.Header>Edward Witten</Card.Header>
+                  <Card.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Card.Meta>
                   <Card.Description>
-                    Matthew is a pianist living in Nashville.
+                    <p><strong>Oct 23 6 PM IST</strong></p>
+                  <p>
+                  Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution". Widely regarded as the "successor of Einstein", Professor Witten's path-breaking treasure trove of contributions to theoretical Physics have led to important developments in pure Mathematics.
+                  </p>
                   </Card.Description>
                 </Card.Content>
+                <Card.Content extra>
+                  <div className="ui two buttons">
+                  <Button fluid basic color='green'>
+                    ZOOM link
+                  </Button>
+                  <Button fluid basic color='blue'>
+                    View Poster
+                  </Button>
+                  </div>
+                  
+                </Card.Content>
+
               </Card>
               <Card
                 meta='Friend'
@@ -65,7 +80,7 @@ class MainView extends Component {
               >
                 <Image src={urlCV} wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Matthew Harris</Card.Header>
+                  <Card.Header>Cumrun Vafa</Card.Header>
                   <Card.Meta>Co-Worker</Card.Meta>
                   <Card.Description>
                     Matthew is a pianist living in Nashville.
@@ -78,7 +93,7 @@ class MainView extends Component {
               >
                 <Image src={urlJM} wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Matthew Harris</Card.Header>
+                  <Card.Header>Juan Maldacena</Card.Header>
                   <Card.Meta>Co-Worker</Card.Meta>
                   <Card.Description>
                     Matthew is a pianist living in Nashville.
@@ -91,7 +106,7 @@ class MainView extends Component {
               >
                 <Image src={urlAA} wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Matthew Harris</Card.Header>
+                  <Card.Header>Abhay Ashtekar</Card.Header>
                   <Card.Meta>Co-Worker</Card.Meta>
                   <Card.Description>
                     Matthew is a pianist living in Nashville.

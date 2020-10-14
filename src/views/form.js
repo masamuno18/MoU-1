@@ -97,11 +97,13 @@ class Register extends Component {
 
         <Container>
 
-          <Segment inverted padded >
-          <Header as='h1' color="grey">
+          <div className="formHeader">
+          <Header as='h1'>
               Register for the event
             </Header>
-          </Segment>
+          </div>
+          
+          
 
 
 
