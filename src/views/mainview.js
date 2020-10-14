@@ -25,18 +25,24 @@ class MainView extends Component {
         <div className='mainWrapper'> 
         
         <div className="mainimg">
-          <div className="centered">Start</div>
+          <div className="centered">Mysteries Of Universe </div>
           <div className="arrow bounce start">
            <a className="fa fa-arrow-down fa-2x" href="#lecture"></a>
           </div>
         </div>
-
-          <Header as="h1" color="red" size="huge">
-            Mysteries of Universe
-          </Header>
-
-          <Header as="h2" align="left" color="violet" size="medium">Description </Header> <br></br>
-
+        
+        <div class="main">
+       <Header as="h1" id="lecture" size="huge">Brief about the lectures </Header>
+        <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
+          Theoretical High Energy Physics and Cosmology, dubbed as <em>The 
+          Institute Lecture MOU(Mysteries of Universe)</em>.</p> <p class="desp"> The lectures will be 
+          the source of immense information covering from Gravity to Black Holes to
+           Gravitational Waves to Hawking Radiation and other related areas. In the lectures, you will be 
+           interacting with some of the eminent physicists of our times. 
+           With these lectures, you will join us as we go on for a beautiful and 
+           knowledgeable experience of the profound and exciting aspects of theoretical physics and Cosmology.
+           </p><br></br><br></br>
+        
           <Container textAlign="center">
             <Card.Group textAlign ="center" itemsPerRow="4">
               <Card
@@ -93,6 +99,12 @@ class MainView extends Component {
               </Card>
             </Card.Group>
           </Container>
+          </div>
+          
+          <div class="footer">
+            Organising team
+          </div>
+
         </div>
       )
     }
