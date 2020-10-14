@@ -14,7 +14,7 @@ import {
 import axios from 'axios'
 import '../styles/mainview.css'
 
-import {urlAA, urlCV, urlEW, urlJM} from "../secrets/images.js"
+import {urlAA, urlCV, urlEW, urlJM, urlbh} from "../secrets/images.js"
  
 class MainView extends Component {
 
@@ -24,9 +24,12 @@ class MainView extends Component {
 
         <div className='mainWrapper'> 
         
-          <div class="arrow bounce start">
-           <a class="fa fa-arrow-down fa-2x" href="#"></a>
-          </div> 
+        <div className="mainimg">
+          <div className="centered">Start</div>
+          <div className="arrow bounce start">
+           <a className="fa fa-arrow-down fa-2x" href="#lecture"></a>
+          </div>
+        </div>
 
           <Header as="h1" color="red" size="huge">
             Mysteries of Universe

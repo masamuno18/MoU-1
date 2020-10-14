@@ -4,6 +4,38 @@
   height: 100%;
 }
 
+/*----*/
+.mainimg{
+  position:relative;
+  text-align:center;
+  color:white;
+  background-image:url("https://www.nasa.gov/sites/default/files/thumbnails/image/simulated_bh.jpg");
+  width:100%;
+  height:100%;
+}
+
+.centered{
+  position:absolute;
+  font-family: 'Orbitron';
+  top:73%;
+  left:51%;
+  font-size:30px;
+  transform:translate(-60%, -50%);
+  z-index:-1;
+  color:white;
+}
+
+.start{
+  color:white;
+  cursor:pointer;
+  position:absolute;
+  z-index:1;
+  transform:translate(-60%, -50%);
+  top:70%;
+  right:48%;
+  color:white;
+}
+
 /*bouncing arrow*/
 @bg: #2d2d37; /* Dark blue */
 @primary: #fd6b21; /* Orange*/
