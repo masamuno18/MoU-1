@@ -17,15 +17,20 @@ function App () {
 
     <Router className='App'>
       <div className='App'>
-        <Container>
-          <Navbar/>
-        </Container>
+        <div className = "nav">
+          <Container>
+            <Navbar/>
+          </Container>
+        </div>
         
-        <Switch>
-          <Route exact path='/' component={MainView} />
-          <Route exact path='/register' component={Register} />
-          <Route exact path='/attendees' component={Attendees} />
-        </Switch>
+        <div className="appBody">
+          <Switch>
+            <Route exact path='/' component={MainView} />
+            <Route exact path='/register' component={Register} />
+            <Route exact path='/attendees' component={Attendees} />
+          </Switch>
+        </div>
+        
 
       </div>
       

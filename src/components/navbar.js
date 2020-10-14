@@ -16,7 +16,7 @@ class Navbar extends Component {
     const { activeItem } = this.state
 
     return (
-      <Menu attached='top' secondary size='massive' >
+      <Menu attached='top' secondary size='massive' color="red" inverted>
         
         <Menu.Menu>
           <Link to='/'>
