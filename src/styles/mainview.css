@@ -15,12 +15,12 @@
 }
 
 .centered{
-  position:absolute;
-  font-family: 'Tangerine';
+  position: absolute;;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   top:45%;
-  left:55%;
-  font-size:65px;
-  transform:translate(-60%, -50%);
+  left:50%;
+  font-size:60px;
+  transform:translate(-50%, -50%);
   z-index:1;
   color:white;
 }
@@ -30,15 +30,18 @@
   cursor:pointer;
   position:absolute;
   z-index:1;
-  transform:translate(-60%, -50%);
+  transform:translate(-50%, -50%);
   top:50%;
-  right:49.5%;
+  right:50%;
   color:white;
+  scroll-behavior: smooth;
 }
+
 .c2{
-  top: 52%;
   z-index:1;
-  padding-left: 40%;
+  transform: translate(-50%, -50%);
+  top:54%;
+  left:50%;
   color: white;
   position: absolute;
   font-size: 30px;
@@ -76,11 +79,8 @@ a { color: white; text-decoration: none; }
 /* -------- speakers page ------ */
 .main{
   border-style:none;
-  /* margin: 2% 7% 5% 7%; */
+  margin: 6% 7% 5% 7%;
   padding: inherit;
-  width: 100%;
-  height: 100%;
-
 }
 
 #lecture{font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
