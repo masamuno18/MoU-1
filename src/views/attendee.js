@@ -72,8 +72,8 @@ class Attendees extends Component {
 
           <Table.Header>
             <Table.Row>
-              <Table.HeaderCell>Name</Table.HeaderCell>
-              <Table.HeaderCell>Designation</Table.HeaderCell>
+              <Table.HeaderCell width="5">Name</Table.HeaderCell>
+              <Table.HeaderCell width="4">Student/ Post Doc/ Faculty</Table.HeaderCell>
               <Table.HeaderCell>Institute</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
@@ -81,8 +81,8 @@ class Attendees extends Component {
           {data.map( (row) => (
             <Table.Body key={row._rowNumber}>
             <Table.Row>
-              <Table.Cell>{row.Name}</Table.Cell>
-              <Table.Cell>{row.Designation}</Table.Cell>
+              <Table.Cell width="5">{row.Name}</Table.Cell>
+              <Table.Cell width="4">{row.Designation}</Table.Cell>
               <Table.Cell>{row.Institute}</Table.Cell>
             </Table.Row>
             </Table.Body>

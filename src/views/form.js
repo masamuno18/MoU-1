@@ -5,6 +5,7 @@ import {
   Message,
   Container,
   Segment,
+  Radio
 } from 'semantic-ui-react'
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
@@ -54,7 +55,7 @@ class Register extends Component {
     }
   };
 
-  handleChange = (event, { name, value }) => {
+  handleChange = (e, { name, value }) => {
     this.setState({ [name]: value })
   }
 
@@ -90,7 +91,8 @@ class Register extends Component {
       designation,
       country,
       submitSuccess,
-      isLoading
+      isLoading,
+      value
     } = this.state
 
     return(
@@ -156,16 +158,40 @@ class Register extends Component {
                 required
                 value={institute}
               />
-            
-              <Form.Input
-                name='designation'
-                fluid
-                label='Designation'
-                placeholder='Current Designation'
+
+              <Header as="h3">Designation <span style={{color: "red"}}>*</span></Header>
+              <Form.Group inline>
+                
+              <Form.Field
+                control={Radio}
+                as="h1"
+                name="designation"
+                label='Student'
+                value='Student'
+                checked={designation === 'Student'}
                 onChange={this.handleChange}
-                required
-                value={designation}
               />
+              <Form.Field
+                control={Radio}
+                as="h1"
+                name="designation"
+                label='Post. Doc.'
+                value='Post. Doc.'
+                checked={designation === 'Post. Doc.'}
+                onChange={this.handleChange}
+              />
+              <Form.Field
+                control={Radio}
+                as="h1"
+                name="designation"
+                label='Faculty Member'
+                value='Faculty Member'
+                checked={designation === 'Faculty Member'}
+                onChange={this.handleChange}
+              />
+            </Form.Group>
+
+              
 
               <Form.Input
                 fluid

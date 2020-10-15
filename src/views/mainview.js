@@ -61,7 +61,7 @@ class MainView extends Component {
             </div>
             
             <Segment padded textAlign="left" color="teal"> 
-              <Item.Group divided link>
+              <Item.Group divided>
                 
                 <Speaker
                   name="John H. Schwarz"
@@ -82,7 +82,7 @@ class MainView extends Component {
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
                   urlPoster={require('../resources/pdfs/EW.pdf')}
                   abstract={abstractEW}
-                  urlInfo="http://www.sns.ias.edu/sites/default/files/files/2020_EWittenCV.pdf"
+                  urlInfo="http://www.sns.ias.edu/witten"
                 />
 
                 <Speaker
