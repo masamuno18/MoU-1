@@ -159,7 +159,7 @@ class Register extends Component {
                 value={institute}
               />
 
-              <Header as="h3">Designation <span style={{color: "red"}}>*</span></Header>
+              <Header as="h3">Student/ Post Doc/ Faculty <span style={{color: "red"}}>*</span></Header>
               <Form.Group inline>
                 
               <Form.Field

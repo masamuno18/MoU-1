@@ -47,7 +47,7 @@ class Speaker extends Component {
         <Item.Image src={urlImage}/>
           <Item.Content verticalAlign="middle">
 
-              <Item.Header onClick={this.handleInfo}>{name}</Item.Header>
+              <Item.Header as="a" onClick={this.handleInfo}>{name}</Item.Header>
               <Item.Meta>{title}</Item.Meta>
               <Item.Description>{description}</Item.Description>
 
