@@ -3,3 +3,4 @@ export const urlEW = "https://d2r55xnwy6nx47.cloudfront.net/uploads/2017/11/EdWi
 export const urlCV = "https://www.ictp.it/ImageHandler.ashx?maxw=500&maxh=500&path=/media/1524518/vafa.jpg"
 export const urlJM = "https://www.ias.edu/sites/default/files/styles/news_featured/public/images/featured-thumbnails/news/PiTP_07272018_AK_-106-sssm.jpg?itok=YdQEZ3jT"
 export const urlbh="https://www.nasa.gov/sites/default/files/thumbnails/image/simulated_bh.jpg"
+export const urliitr = "https://www.userlogos.org/files/logos/jumpordie/iitr-02.png"

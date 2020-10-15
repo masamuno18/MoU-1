@@ -67,7 +67,7 @@ class Attendees extends Component {
         <Loader active={isLoading} inline='centered' />
 
         {!isLoading && 
-        <Table striped  color="teal" size="large" padded stackable>
+        <Table striped  color="green" size="large" padded stackable inverted>
 
           <Table.Header>
             <Table.Row>
