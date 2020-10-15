@@ -29,7 +29,7 @@ class MainView extends Component {
 
               <div className="mainHeader">
                 <h1 size="huge" className='h1'>Mysteries of the Universe </h1>
-                <h2 className='h2' id="subh">
+                <h2 className='h2' id="h2">
                   Presented by Institute Lecture Series committee, in collaboration with the IIT Roorkee Chapter of the Indian Physics Association
                   and the Student Technical Council (The Physics and Astronomy Club)
                 </h2>
