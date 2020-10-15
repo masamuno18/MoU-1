@@ -43,7 +43,6 @@ class MainView extends Component {
                 Event Speakers
               </Header>
             </div>
-            
 
             <Segment padded textAlign="left" color="teal"> 
               <Item.Group divided>
