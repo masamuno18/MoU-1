@@ -97,19 +97,18 @@ class Register extends Component {
 
         <Container>
 
-          <Segment inverted padded >
-          <Header as='h1' color="teal">
+          <div className="formHeader">
+            <Header as='h1' size="huge" id="fh">
               Register for the event
+              <Header color="green" as="h3">*The registration is not mandatory for attendance.</Header>
             </Header>
-          </Segment>
-
-
-
+            
+          </div>
+         
           <Segment color="black" padded >
 
             <Form
             className="form"
-            
             size="huge"
             onSubmit={this.handleSubmit}
             success={submitSuccess}
@@ -169,7 +168,7 @@ class Register extends Component {
                 fluid
                 name='country'
                 label='Country'
-                placeholder='Country of residence'
+                placeholder='Country of Residence'
                 onChange={this.handleChange}
                 required
                 value={country}

@@ -58,16 +58,18 @@ class Attendees extends Component {
 
       <Container>
 
-          
-          <Header as='h1' color="teal" size="large">
-              Event Participants
-            </Header>
+        <div className="atHeader">
+          <Header as='h1' size="huge" id="ath">
+            Event Participants
+          </Header>
+        </div>
+        
         
         
         <Loader active={isLoading} inline='centered' />
 
         {!isLoading && 
-        <Table striped  color="teal" size="large" padded stackable>
+        <Table striped  color="teal" size="large" padded stackable inverted>
 
           <Table.Header>
             <Table.Row>

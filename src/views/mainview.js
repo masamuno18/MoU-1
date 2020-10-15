@@ -1,22 +1,16 @@
 import React, { Component } from 'react'
 import {
-  Accordion,
   Header,
-  Icon,
-  Grid,
-  Button,
   Segment,
   Container,
-  Divider,
-  Image,
-  Card,
   Item,
-  Label
 } from 'semantic-ui-react'
-import axios from 'axios'
+
+import Speaker from '../components/speaker.js'
 import '../styles/mainview.css'
 
-import {urlAA, urlCV, urlEW, urlJM, urlbh} from "../secrets/images.js"
+import {urlAA, urlCV, urlEW, urlJM, urlbh, urlJS} from "../secrets/images.js"
+import {abstractJS, abstractCV, abstractJM} from "../secrets/abstract.js"
  
 class MainView extends Component {
 
@@ -30,8 +24,8 @@ class MainView extends Component {
             <Container textAlign="center">
 
               <div className="mainHeader">
-                <Header as="H1" size="huge" className='white'>Mysteries Of Universe</Header>
-                <Header sub className="white">(Oct 17 to Nov 28)</Header>
+                <Header as="H1" size="huge" className='white'>Mysteries of Universe</Header>
+                <Header sub className="white">(Oct 17 to Nov 27, 2020)</Header>
               </div>
 
               <div className="arrow bounce start">
@@ -51,118 +45,58 @@ class MainView extends Component {
             </div>
             
             <Segment padded textAlign="left" color="teal"> 
-              <Item.Group divided>
-                <Item>
-                  <Item.Image src={urlEW}/>
-                  
-                  <Item.Content verticalAlign="middle">
+              <Item.Group divided link>
+                
+                <Speaker
+                  name="John H. Schwarz"
+                  urlImage={urlJS}
+                  title="The Birth and Development of Superstring Theory"
+                  description="One of the Founding fathers of String theory"
+                  time="Oct-17 8:30 PM IST (UTC + 5:30)"
+                  abstract={abstractJS}
+                />
 
-                    <Item.Header>Edward Witten</Item.Header>
-                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
+                <Speaker
+                  name="Edward Witten"
+                  urlImage={urlEW}
+                  title="2-Dimensional gravity and volumes of moduli spaces"
+                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  time="Oct-23 6:00 PM IST (UTC + 5:30)"
+                />
 
-                    <Item.Description>
-                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
-                    </Item.Description>
+                <Speaker
+                  name="Cumrun Vafa"
+                  urlImage={urlCV}
+                  title="2-Dimensional gravity and volumes of moduli spaces"
+                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  time="Oct-23 6:00 PM IST (UTC + 5:30)"
+                  abstract={abstractCV}
+                />
 
-                    <Item.Extra>
-                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
-                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
-                      <Button inverted color="purple" floated='right' content="View Poster"/>
-                    </Item.Extra>
-                    
-                  </Item.Content>
-                </Item>
+                <Speaker
+                  name="Juan Maldacena"
+                  urlImage={urlJM}
+                  title="Black holes and the information in Hawking radiation"
+                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  time="Nov-21 6:00 PM IST (UTC + 5:30)"
+                  abstract={abstractJM}
+                />
 
-                <Item>
-                  <Item.Image src={urlEW}/>
-                  
-                  <Item.Content verticalAlign="middle">
+                <Speaker
+                  name="Abhay Ashtekhar"
+                  urlImage={urlAA}
+                  title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
+                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  time="Nov-28 8:00 PM IST (UTC + 5:30)"
+                />
 
-                    <Item.Header>Edward Witten</Item.Header>
-                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
-                    
-                    <Item.Description>
-                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
-                    </Item.Description>
-
-                    <Item.Extra>
-                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
-                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
-                      <Button inverted color="purple" floated='right' content="View Poster"/>
-                    </Item.Extra>
-                    
-                  </Item.Content>  
-                </Item>
-
-                <Item>
-                  <Item.Image src={urlEW}/>
-                  
-                  <Item.Content verticalAlign="middle">
-
-                    <Item.Header>Edward Witten</Item.Header>
-                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
-
-                    <Item.Description>
-                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
-                    </Item.Description>
-
-                    <Item.Extra>
-                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
-                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
-                      <Button inverted color="purple" floated='right' content="View Poster"/>
-                    </Item.Extra>
-                    
-                  </Item.Content>
-                </Item>
-
-                <Item>
-                  <Item.Image src={urlEW}/>
-                  
-                  <Item.Content verticalAlign="middle">
-
-                    <Item.Header>Edward Witten</Item.Header>
-                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
-
-                    <Item.Description>
-                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
-                    </Item.Description>
-
-                    <Item.Extra>
-                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
-                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
-                      <Button inverted color="purple" floated='right' content="View Poster"/>
-                    </Item.Extra>
-                    
-                  </Item.Content>
-                </Item>
-
-                <Item>
-                  <Item.Image src={urlEW}/>
-                  
-                  <Item.Content verticalAlign="middle">
-
-                    <Item.Header>Edward Witten</Item.Header>
-                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
-
-                    <Item.Description>
-                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
-                    </Item.Description>
-
-                    <Item.Extra>
-                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
-                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
-                      <Button inverted color="purple" floated='right' content="View Poster"/>
-                    </Item.Extra>
-                    
-                  </Item.Content>
-                </Item>
               </Item.Group>
             </Segment>
           </Container>
         </div>
         
-        <div class="about">
-          <Header as="h1" id="lecture" size="huge">Brief about the lectures </Header>
+        <div className="about">
+          <Header as="h1" size="huge">Brief about the lectures </Header>
           <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
           Theoretical High Energy Physics and Cosmology, dubbed as <em>The 
           Institute Lecture MOU(Mysteries of Universe)</em>.</p> <p class="desp"> The lectures will be 
