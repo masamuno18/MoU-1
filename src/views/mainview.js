@@ -24,18 +24,24 @@ class MainView extends Component {
 
       return (
 
-        <div className='mainWrapper'> 
-        
-        <div className="mainimg">
-          <div className="centered">Mysteries Of Universe</div>
-          <div className="c2">(Oct 23 to Nov 28)</div>
-          <div className="arrow bounce start">
-           <a className="fa fa-arrow-down fa-2x" href="#speaker"></a>
+        <div className='mainWrapper'>
+
+          <div className="mainimg">
+            <Container textAlign="center">
+
+              <div className="mainHeader">
+                <Header as="H1" size="huge" className='white'>Mysteries Of Universe</Header>
+                <Header sub className="white">(Oct 17 to Nov 28)</Header>
+              </div>
+
+              <div className="arrow bounce start">
+                <a className="fa fa-arrow-down fa-2x" href="#speaker"></a>
+              </div>
+
+            </Container>
           </div>
-        </div>
 
         <div class="speaker" id="speaker">
-          
           <Container >
 
             <div id="esh">
@@ -44,7 +50,6 @@ class MainView extends Component {
               </Header>
             </div>
             
-
             <Segment padded textAlign="left" color="teal"> 
               <Item.Group divided>
                 <Item>
@@ -154,12 +159,11 @@ class MainView extends Component {
               </Item.Group>
             </Segment>
           </Container>
-          
         </div>
         
-        <div class="main">
-       <Header as="h1" id="lecture" size="huge">Brief about the lectures </Header>
-        <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
+        <div class="about">
+          <Header as="h1" id="lecture" size="huge">Brief about the lectures </Header>
+          <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
           Theoretical High Energy Physics and Cosmology, dubbed as <em>The 
           Institute Lecture MOU(Mysteries of Universe)</em>.</p> <p class="desp"> The lectures will be 
           the source of immense information covering from Gravity to Black Holes to
