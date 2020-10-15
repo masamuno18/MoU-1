@@ -5,8 +5,6 @@ import {
   Message,
   Container,
   Segment,
-  Button,
-  Grid
 } from 'semantic-ui-react'
 import { GoogleSpreadsheet } from "google-spreadsheet";
 
@@ -25,6 +23,11 @@ class Register extends Component {
     this.state = {
       submitSuccess: false,
       isLoading: false,
+      name: '', 
+      country: '', 
+      institute: '', 
+      designation: '', 
+      email: ''
     }
   }
   
@@ -100,9 +103,7 @@ class Register extends Component {
           <div className="formHeader">
             <Header as='h1' size="huge" id="fh">
               Register for the event
-              <Header color="green" as="h3">*The registration is not mandatory for attendance.</Header>
             </Header>
-            
           </div>
          
           <Segment color="black" padded >

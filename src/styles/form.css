@@ -12,7 +12,7 @@
 }
 
 .pageBG{
-  background-image:url("../images/bg.jpg");
+  background-image:url("../resources/images/bg.jpg");
   background-repeat: repeat-x;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,10 +21,10 @@
   height: 100%;
 }
 
-.formHeader{
+/* .formHeader{
   font-size: 1.5em;
-}
+} */
 
-#fh{
+/* #fh{
   color: white !important;
-}
+} */

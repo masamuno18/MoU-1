@@ -3,7 +3,6 @@ import  {
   Table,
   Container,
   Header,
-  Segment,
   Loader,
 } from 'semantic-ui-react'
 import { GoogleSpreadsheet } from "google-spreadsheet";
@@ -79,8 +78,8 @@ class Attendees extends Component {
             </Table.Row>
           </Table.Header>
           
-          {this.state.data.map( (row, key) => (
-            <Table.Body>
+          {data.map( (row) => (
+            <Table.Body key={row._rowNumber}>
             <Table.Row>
               <Table.Cell>{row.Name}</Table.Cell>
               <Table.Cell>{row.Designation}</Table.Cell>

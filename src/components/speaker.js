@@ -1,19 +1,13 @@
 import React, { Component } from 'react'
 import {
-  Accordion,
   Header,
-  Icon,
-  Grid,
   Button,
-  Segment,
-  Container,
-  Divider,
   Image,
-  Card,
   Item,
   Label,
   Modal
 } from 'semantic-ui-react'
+
 
 class Speaker extends Component {
 
@@ -29,16 +23,18 @@ class Speaker extends Component {
 
   handleClose = () => this.setState({ modalOpen: '' })
 
-  handleZOOM = urlZOOM => {
-    this.setState({ modalOpen: '' })
+  handleZOOM = e => {
+    this.handleClose()
   }
 
-  handlePoster = urlPoster => {
-    this.setState({ modalOpen: '' })
+  handlePoster = e => {
+    this.handleClose()
+    window.open(this.props.urlPoster, "_blank")
   }
+
   render() {
 
-    const {name, urlImage, title, description, time, abstract, urlZOOM, urlPoster} = this.props;
+    const {name, urlImage, title, description, time, abstract} = this.props;
 
     return(
 
@@ -54,8 +50,8 @@ class Speaker extends Component {
 
               <Item.Extra>
                 <Label color="teal" icon='clock' content={time} />
-                <Button inverted color="green" floated='right' content="ZOOM LINK" onClick={() => this.handleZOOM(urlZOOM)}/>
-                <Button inverted color="purple" floated='right' content="View Poster" onClick={() => this.handlePoster(urlPoster)}/>
+                <Button inverted color="green" floated='right' content="ZOOM LINK" onClick={this.handleZOOM}/>
+                <Button inverted color="purple" floated='right' content="View Poster" onClick={this.handlePoster}/>
               </Item.Extra>
               
             </Item.Content>

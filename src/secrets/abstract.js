@@ -29,3 +29,11 @@ export const abstractJM = "Black holes are fascinating objects where spacetime i
   of Hawking radiation and the puzzles that it raises. We will then introduce an idea for describing \
   spacetime where some of the dimensions are emergent and we get an interesting relation between \
   black holes and more conventional quantum systems. "
+
+export const abstractEW = "Since it is difficult to understand gravity at the quantum level, physicists \
+  have sought understanding from simpler models in low dimensions. In this talk, I will explain how a simple \
+  model of quantum gravity in two dimensions leads to the study of the volumes of the moduli spaces of Riemann surfaces."
+
+export const abstractAA = "In this general talk, I will discuss how paradigm shifts occur in fundamental physics, \
+giving examples from the 20th century and drawing lessons that younger researchers and people from Mathematics and \
+Chemistry would find useful. In light of the 2020 Nobel prize on black holes,  one of the three parts of the talk is on Black Holes."
