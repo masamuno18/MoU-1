@@ -103,7 +103,9 @@ class Register extends Component {
           <div className="formHeader">
             <Header as='h1' size="huge" id="fh">
               Register for the event
+              <Header color="green" as="h3">*The registration is not mandatory for attendance.</Header>
             </Header>
+            
           </div>
          
           <Segment color="black" padded >

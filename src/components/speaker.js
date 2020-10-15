@@ -5,7 +5,8 @@ import {
   Image,
   Item,
   Label,
-  Modal
+  Modal,
+  Icon
 } from 'semantic-ui-react'
 
 
@@ -34,7 +35,7 @@ class Speaker extends Component {
 
   render() {
 
-    const {name, urlImage, title, description, time, abstract} = this.props;
+    const {name, urlImage, title, description, time, abstract, urlPoster, urlZOOM} = this.props;
 
     return(
 
@@ -50,8 +51,8 @@ class Speaker extends Component {
 
               <Item.Extra>
                 <Label color="teal" icon='clock' content={time} />
-                <Button inverted color="green" floated='right' content="ZOOM LINK" onClick={this.handleZOOM}/>
-                <Button inverted color="purple" floated='right' content="View Poster" onClick={this.handlePoster}/>
+                <Button inverted disabled={!urlZOOM} color="green" floated='right' content="ZOOM LINK" onClick={this.handleZOOM}/>
+                <Button inverted disabled={!urlPoster} color="purple" floated='right' content="View Poster" onClick={this.handlePoster}/>
               </Item.Extra>
               
             </Item.Content>
@@ -60,7 +61,10 @@ class Speaker extends Component {
         open={this.state.modalOpen === name}
         onClose={this.handleClose}
       >
-         <Modal.Header>{title}</Modal.Header>
+         <Modal.Header>
+          {title}
+          <Button floated="right" icon onClick={this.handleClose}><Icon color="red" name="close"/></Button>
+        </Modal.Header>
       
 
          <Modal.Content image>

@@ -9,6 +9,12 @@
   height: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+  .tableWrapper{
+    padding-top: 15%;
+  }
+}
+
 .atHeader{
   font-size: 1.5em;
   margin-bottom: 2%;

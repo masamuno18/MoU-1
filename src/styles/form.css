@@ -5,6 +5,14 @@
   margin-left: 32.5%;
 }
 
+@media only screen and (max-width: 600px) {
+  .form_wrapper{
+    padding-top: 15%;
+    width: 100%;
+    margin-left: 0%;
+  }
+}
+
 .form{
   text-align: left;
   padding: 2%;
@@ -21,10 +29,10 @@
   height: 100%;
 }
 
-/* .formHeader{
+.formHeader{
   font-size: 1.5em;
-} */
+}
 
-/* #fh{
+#fh{
   color: white !important;
-} */
+}

@@ -54,7 +54,7 @@ class MainView extends Component {
                   name="John H. Schwarz"
                   urlImage={require('../resources/images/JS.jpg')}
                   title="The Birth and Development of Superstring Theory"
-                  description="One of the Founding fathers of String theory"
+                  description="Theoretical Physicist and one of the founding fathers of the String theory."
                   time="Oct-17 8:30 PM IST (UTC + 5:30)"
                   abstract={abstractJS}
                   urlPoster={require('../resources/pdfs/JS.pdf')}
@@ -64,7 +64,7 @@ class MainView extends Component {
                   name="Edward Witten"
                   urlImage={require('../resources/images/EW.jpg')}
                   title="2-Dimensional gravity and volumes of moduli spaces"
-                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  description="Prestigious and highly awarded Physicist who also developed important concepts in pure mathematics. "
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
                   urlPoster={require('../resources/pdfs/EW.pdf')}
                   abstract={abstractEW}
@@ -74,7 +74,7 @@ class MainView extends Component {
                   name="Cumrun Vafa"
                   urlImage={require('../resources/images/CV.jpg')}
                   title="Puzzles to Unravel the Universe"
-                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  description="Phd student of Prof. Witten, A Physicist with research focused on Quantum gravity."
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
                   abstract={abstractCV}
                 />
@@ -83,7 +83,7 @@ class MainView extends Component {
                   name="Juan Maldacena"
                   urlImage={require('../resources/images/JM.jpg')}
                   title="Black holes and the information in Hawking radiation"
-                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  description="Discoverer of AdS/CFT correspondence, Highly cited Theoretical Physicist."
                   time="Nov-21 6:00 PM IST (UTC + 5:30)"
                   abstract={abstractJM}
                 />
@@ -92,7 +92,7 @@ class MainView extends Component {
                   name="Abhay Ashtekhar"
                   urlImage={require('../resources/images/AA.jpeg')}
                   title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
-                  description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
+                  description="Founder of loop quantum gravity and loop quantum cosmology."
                   time="Nov-28 8:00 PM IST (UTC + 5:30)"
                   abstract={abstractAA}
                 />
@@ -126,11 +126,11 @@ class MainView extends Component {
                 
                   <Grid.Column width="9" floated="left">
                     <Image.Group size='small'>
-                      <Image src={require('../resources/images/iitrlogo.png')}  circular />
-                      <Image src={require('../resources/images/Ipa.png')}  />
-                      <Image src={require('../resources/images/wma.png')}  />
-                      <Image src={require('../resources/images/stclogo.png')}  />
-                      <Image src={require('../resources/images/paaclogo.png')} circular />
+                      <Image src={require('../resources/images/iitrlogo.png')} title="IIT Roorkee"/>
+                      <Image src={require('../resources/images/Ipa.png')} title="Indian Physics Association, Roorkee Chapter"  />
+                      <Image src={require('../resources/images/wma.png')} title="Mysteries of Universe by Prof. Aalok Mishra"/>
+                      <Image src={require('../resources/images/stclogo.png')} title="Student Technical Council, IITR"  />
+                      <Image src={require('../resources/images/paaclogo.png')} circular title="Physics and Astronomy Club, IITR"/>
                     </Image.Group>
                   
                   </Grid.Column>
