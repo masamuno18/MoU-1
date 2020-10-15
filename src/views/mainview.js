@@ -28,12 +28,12 @@ class MainView extends Component {
             <Container textAlign="center">
 
               <div className="mainHeader">
-                <Header as="h1" size="huge" className='white'>Mysteries of the Universe </Header>
-                <Header as="h1" className='white'>
+                <h1 size="huge" className='h1'>Mysteries of the Universe </h1>
+                <h2 className='h2'>
                   Presented by Institute Lecture Series committee, in collaboration with the IIT Roorkee Chapter of the Indian Physics Association
                   and the Student Technical Council (The Physics and Astronomy Club)
-                </Header>
-                <Header as="h1" className="white">(Oct 17 to Nov 27, 2020)</Header>
+                </h2>
+                <h1 className="date">(Oct 17 to Nov 27, 2020)</h1>
               </div>
 
               <Link
@@ -72,6 +72,7 @@ class MainView extends Component {
                   abstract={abstractJS}
                   urlPoster={require('../resources/pdfs/JS.pdf')}
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
+                  urlZOOM="##"
                 />
 
                 <Speaker
@@ -83,6 +84,7 @@ class MainView extends Component {
                   urlPoster={require('../resources/pdfs/EW.pdf')}
                   abstract={abstractEW}
                   urlInfo="http://www.sns.ias.edu/sites/default/files/files/2020_EWittenCV.pdf"
+                  urlZOOM="##"
                 />
 
                 <Speaker
@@ -150,7 +152,7 @@ class MainView extends Component {
                     <Image.Group size='small'>
                       <Image src={require('../resources/images/iitrlogo.png')} title="IIT Roorkee"/>
                       <Image src={require('../resources/images/Ipa.png')} title="Indian Physics Association, Roorkee Chapter"  />
-                      <Image src={require('../resources/images/wma.png')} title="Mysteries of Universe by Prof. Aalok Mishra"/>
+                      <Image src={require('../resources/images/wma.png')} title="Mysteries of Universe by Prof. Aalok Misra"/>
                       <Image src={require('../resources/images/stclogo.png')} title="Student Technical Council, IITR"  />
                       <Image src={require('../resources/images/paaclogo.png')} circular title="Physics and Astronomy Club, IITR"/>
                     </Image.Group>
