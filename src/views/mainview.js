@@ -14,7 +14,6 @@ import {
 import Speaker from '../components/speaker.js'
 import '../styles/mainview.css'
 
-import {urlAA, urlCV, urlEW, urlJM, urlbh, urlJS, urliitr} from "../secrets/images.js"
 import {abstractJS, abstractCV, abstractJM} from "../secrets/abstract.js"
  
 
@@ -55,7 +54,7 @@ class MainView extends Component {
                 
                 <Speaker
                   name="John H. Schwarz"
-                  urlImage={urlJS}
+                  urlImage={require('../images/JS.jpg')}
                   title="The Birth and Development of Superstring Theory"
                   description="One of the Founding fathers of String theory"
                   time="Oct-17 8:30 PM IST (UTC + 5:30)"
@@ -64,7 +63,7 @@ class MainView extends Component {
 
                 <Speaker
                   name="Edward Witten"
-                  urlImage={urlEW}
+                  urlImage={require('../images/EW.jpg')}
                   title="2-Dimensional gravity and volumes of moduli spaces"
                   description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
@@ -72,7 +71,7 @@ class MainView extends Component {
 
                 <Speaker
                   name="Cumrun Vafa"
-                  urlImage={urlCV}
+                  urlImage={require('../images/CV.jpg')}
                   title="2-Dimensional gravity and volumes of moduli spaces"
                   description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
@@ -81,7 +80,7 @@ class MainView extends Component {
 
                 <Speaker
                   name="Juan Maldacena"
-                  urlImage={urlJM}
+                  urlImage={require('../images/JM.jpg')}
                   title="Black holes and the information in Hawking radiation"
                   description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
                   time="Nov-21 6:00 PM IST (UTC + 5:30)"
@@ -90,7 +89,7 @@ class MainView extends Component {
 
                 <Speaker
                   name="Abhay Ashtekhar"
-                  urlImage={urlAA}
+                  urlImage={require('../images/AA.jpeg')}
                   title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
                   description="Field Medalist (1990), Fundamental Physics laureate (2012), led the 'Second Superstring Revolution'."
                   time="Nov-28 8:00 PM IST (UTC + 5:30)"
@@ -105,7 +104,7 @@ class MainView extends Component {
            <Header as="h1" id="#lecture" size="huge" color="purple">Brief about the lectures </Header>
            <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
            Theoretical High Energy Physics and Cosmology, dubbed as <em>The 
-           Institute Lecture MOU(Mysteries of Universe)</em>.</p> <p class="desp"> The lectures will be 
+           Institute Lecture MOU (Mysteries of Universe)</em>.</p> <p class="desp"> The lectures will be 
            the source of immense information covering from Gravity to Black Holes to
            Gravitational Waves to Hawking Radiation and other related areas. In the lectures, you will be 
            interacting with some of the eminent physicists of our times. 
@@ -116,12 +115,15 @@ class MainView extends Component {
           
          
             <Segment padded inverted>
-              <Grid>
-                <Grid.Row>
-                  <Grid.Column width="4">
+              <Grid stackable>
+                
+                  <Grid.Column width="9" floated="left">
                     <Image.Group size='small'>
-                      <Image src={urliitr}  circular />
-                      <Image src={require('./paaclogo.png')} circular />
+                      <Image src={require('../images/iitrlogo.png')}  circular />
+                      <Image src={require('../images/Ipa.png')}  />
+                      <Image src={require('../images/wma.png')}  />
+                      <Image src={require('../images/stclogo.png')}  />
+                      <Image src={require('../images/paaclogo.png')} circular />
                     </Image.Group>
                   
                   </Grid.Column>
@@ -130,10 +132,16 @@ class MainView extends Component {
                   <Grid.Column width="3" floated="right" textAlign="left" verticalAlign="middle">
                     <Header as="h2" id="contact"> Contact</Header>
                     <hr id="divi"/>
-                    <Header color="teal" as="a">aalok.mishra@ph.iitr.ac.in</Header>
-                    <Header color="teal" as="a"> paac@iitr.ac.in</Header>
+                    <Grid.Row>
+                      <Header color="teal" as="a"> paac@iitr.ac.in</Header>
+                    </Grid.Row>
+                    <Grid.Row>
+                      <Header color="teal" as="a">aalok.mishra@ph.iitr.ac.in</Header>
+                    </Grid.Row>
+                    
+                    
                   </Grid.Column>
-                </Grid.Row>
+                
 
               </Grid>
               

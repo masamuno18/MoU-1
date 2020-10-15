@@ -29,9 +29,16 @@ class Speaker extends Component {
 
   handleClose = () => this.setState({ modalOpen: '' })
 
+  handleZOOM = urlZOOM => {
+    this.setState({ modalOpen: '' })
+  }
+
+  handlePoster = urlPoster => {
+    this.setState({ modalOpen: '' })
+  }
   render() {
 
-    const {name, urlImage, title, description, time, abstract} = this.props;
+    const {name, urlImage, title, description, time, abstract, urlZOOM, urlPoster} = this.props;
 
     return(
 
@@ -47,8 +54,8 @@ class Speaker extends Component {
 
               <Item.Extra>
                 <Label color="teal" icon='clock' content={time} />
-                <Button inverted color="green" floated='right' content="ZOOM LINK"/>
-                <Button inverted color="purple" floated='right' content="View Poster"/>
+                <Button inverted color="green" floated='right' content="ZOOM LINK" onClick={() => this.handleZOOM(urlZOOM)}/>
+                <Button inverted color="purple" floated='right' content="View Poster" onClick={() => this.handlePoster(urlPoster)}/>
               </Item.Extra>
               
             </Item.Content>
