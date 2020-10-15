@@ -33,19 +33,20 @@ class Speaker extends Component {
     window.open(this.props.urlPoster, "_blank")
   }
 
+  handleInfo = e => {
+    window.open(this.props.urlInfo, "_blank")
+  }
   render() {
 
     const {name, urlImage, title, description, time, abstract, urlPoster, urlZOOM} = this.props;
 
     return(
 
-      <Modal
-        trigger={
-          <Item onClick={() => this.handleOpen(name)}>
-            <Item.Image src={urlImage}/>
-            <Item.Content verticalAlign="middle">
+      <Item onClick={() => this.handleOpen(name)}>
+        <Item.Image src={urlImage}/>
+          <Item.Content verticalAlign="middle">
 
-              <Item.Header>{name}</Item.Header>
+              <Item.Header onClick={this.handleInfo}>{name}</Item.Header>
               <Item.Meta>{title}</Item.Meta>
               <Item.Description>{description}</Item.Description>
 
@@ -53,10 +54,12 @@ class Speaker extends Component {
                 <Label color="teal" icon='clock' content={time} />
                 <Button inverted disabled={!urlZOOM} color="green" floated='right' content="ZOOM LINK" onClick={this.handleZOOM}/>
                 <Button inverted disabled={!urlPoster} color="purple" floated='right' content="View Poster" onClick={this.handlePoster}/>
-              </Item.Extra>
+
+      <Modal
+        trigger={
+          
+                <Button inverted  color="orange" floated='right' content="View Abstract" />
               
-            </Item.Content>
-          </Item>
         }
         open={this.state.modalOpen === name}
         onClose={this.handleClose}
@@ -75,6 +78,10 @@ class Speaker extends Component {
           </Modal.Description>
         </Modal.Content>
       </Modal>
+      </Item.Extra>
+              
+            </Item.Content>
+          </Item>
     )
   }
 }

@@ -28,8 +28,12 @@ class MainView extends Component {
             <Container textAlign="center">
 
               <div className="mainHeader">
-                <Header as="h1" size="huge" className='white'>Mysteries of Universe</Header>
-                <Header sub className="white">(Oct 17 to Nov 27, 2020)</Header>
+                <Header as="h1" size="huge" className='white'>Mysteries of the Universe </Header>
+                <Header as="h1" className='white'>
+                  Presented by Institute Lecture Series committee, in collaboration with the IIT Roorkee Chapter of the Indian Physics Association
+                  and the Student Technical Council (The Physics and Astronomy Club)
+                </Header>
+                <Header as="h1" className="white">(Oct 17 to Nov 27, 2020)</Header>
               </div>
 
               <Link
@@ -63,47 +67,52 @@ class MainView extends Component {
                   name="John H. Schwarz"
                   urlImage={require('../resources/images/JS.jpg')}
                   title="The Birth and Development of Superstring Theory"
-                  description="Theoretical Physicist and one of the founding fathers of the String theory."
+                  description="Harold Brown Professor of Theoretical Physics at Caltech and one of the founding fathers of Superstring theory"
                   time="Oct-17 8:30 PM IST (UTC + 5:30)"
                   abstract={abstractJS}
                   urlPoster={require('../resources/pdfs/JS.pdf')}
+                  urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
                 />
 
                 <Speaker
                   name="Edward Witten"
                   urlImage={require('../resources/images/EW.jpg')}
                   title="2-Dimensional gravity and volumes of moduli spaces"
-                  description="Prestigious and highly awarded Physicist who also developed important concepts in pure mathematics. "
+                  description="Field Medalist and Charles Simonyi Professor in the School of Natural Sciences at the Institute for Advanced Study, Princeton "
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
                   urlPoster={require('../resources/pdfs/EW.pdf')}
                   abstract={abstractEW}
+                  urlInfo="http://www.sns.ias.edu/sites/default/files/files/2020_EWittenCV.pdf"
                 />
 
                 <Speaker
                   name="Cumrun Vafa"
                   urlImage={require('../resources/images/CV.jpg')}
                   title="Puzzles to Unravel the Universe"
-                  description="Phd student of Prof. Witten, A Physicist with research focused on Quantum gravity."
+                  description="Hollis Professor of Mathematics and Natural Philosophy at Harvard"
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
                   abstract={abstractCV}
+                  urlInfo="https://www.physics.harvard.edu/people/facpages/vafa"
                 />
 
                 <Speaker
                   name="Juan Maldacena"
                   urlImage={require('../resources/images/JM.jpg')}
                   title="Black holes and the information in Hawking radiation"
-                  description="Discoverer of AdS/CFT correspondence, Highly cited Theoretical Physicist."
+                  description="Carl P. Feinberg Professor in the School of Natural Sciences at the Institute for Advanced Study, Princeton"
                   time="Nov-21 6:00 PM IST (UTC + 5:30)"
                   abstract={abstractJM}
+                  urlInfo="https://www.ias.edu/scholars/maldacena"
                 />
 
                 <Speaker
                   name="Abhay Ashtekhar"
                   urlImage={require('../resources/images/AA.jpeg')}
                   title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
-                  description="Founder of loop quantum gravity and loop quantum cosmology."
+                  description="Eberly Professor of Physics and the Director of the Institute for Gravitational Physics and Geometry at Pennsylvania State University"
                   time="Nov-28 8:00 PM IST (UTC + 5:30)"
                   abstract={abstractAA}
+                  urlInfo="http://igpg.gravity.psu.edu/people/Ashtekar/cv.html"
                 />
 
               </Item.Group>
@@ -114,17 +123,21 @@ class MainView extends Component {
          <div className="about">
             <Header as="h1" id="#lecture" size="huge" color="purple">Brief about the lectures </Header>
             <p className="desp">
-              Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, 
-              IIT Roorkee heartily invites you to a series of five lectures in the field of 
-              Theoretical High Energy Physics and Cosmology, dubbed as <b>The Institute Lecture Series - MOU 
-              (Mysteries of Universe)</b>.
+            The Institute Lecture Series Committee, 
+            in collaboration with the Students' Technical Council 
+            (the Physics and Astronomy Club, in particular) and the IIT Roorkee 
+            chapter of the Indian Physics Association, is delighted to bring you 
+            a bouquet of Mysteries of the Universe (MOU) online lecture series 
+            delivered by world renowned experts who are the founding fathers of our 
+            efforts in understanding concepts like black holes, unification of forces, 
+            origin of the universe and quantum gravity.
             </p> 
             <p className="desp"> 
               The lectures will be 
-              the source of immense information covering from Gravity to Black Holes to Gravitational Waves 
-              to Hawking Radiation and other related areas. In the lectures, we shall be interacting with some of the 
-              biggest names in the field of Physics times. Join us as we go on for a beautiful and 
-              exhilirating journey of the most profound and exciting aspects of theoretical Physics and Cosmology.
+              a source of immense information covering areas ranging from Black Holes to Gravitational Waves to Quantum Gravity
+              and other related areas. In these lectures, we shall be interacting with some of the 
+              biggest names in the field of Physics of our times. Join us as we go on a beautiful and 
+              exhilarating journey of the most profound and exciting aspects of theoretical Physics and Cosmology.
            </p>
            <br></br><br></br>
          </div>
@@ -152,7 +165,7 @@ class MainView extends Component {
                       <Header color="teal" as="a"> paac@iitr.ac.in</Header>
                     </Grid.Row>
                     <Grid.Row>
-                      <Header color="teal" as="a">aalok.mishra@ph.iitr.ac.in</Header>
+                      <Header color="teal" as="a">aalok.misra@ph.iitr.ac.in</Header>
                     </Grid.Row>
                     
                     
