@@ -20,7 +20,7 @@ class Speaker extends Component {
     }
   }
 
-  handleOpen = name => this.setState({ modalOpen: name })
+  handleOpen = e => this.setState({ modalOpen: this.props.name })
 
   handleClose = () => this.setState({ modalOpen: '' })
 
@@ -42,7 +42,7 @@ class Speaker extends Component {
 
     return(
 
-      <Item onClick={() => this.handleOpen(name)}>
+      <Item>
         <Item.Image src={urlImage}/>
           <Item.Content verticalAlign="middle">
 
@@ -55,31 +55,26 @@ class Speaker extends Component {
                 <Button inverted disabled={!urlZOOM} color="green" floated='right' content="ZOOM LINK" onClick={this.handleZOOM}/>
                 <Button inverted disabled={!urlPoster} color="purple" floated='right' content="View Poster" onClick={this.handlePoster}/>
 
-      <Modal
-        trigger={
-          
-                <Button inverted  color="orange" floated='right' content="View Abstract" />
-              
-        }
-        open={this.state.modalOpen === name}
-        onClose={this.handleClose}
-      >
-         <Modal.Header>
-          {title}
-          <Button floated="right" icon onClick={this.handleClose}><Icon color="red" name="close"/></Button>
-        </Modal.Header>
-      
-
-         <Modal.Content image>
-          <Image size='medium' src={urlImage} />
-          <Modal.Description>
-            <Header>Abstract</Header>
-            <p> {abstract}</p>
-          </Modal.Description>
-        </Modal.Content>
-      </Modal>
-      </Item.Extra>
-              
+                <Modal
+                  trigger={<Button inverted  color="orange" floated='right' content="View Abstract" onClick={this.handleOpen}/>}
+                  open={this.state.modalOpen === name}
+                  onClose={this.handleClose}
+                >
+                  
+                  <Modal.Header>
+                    {title}
+                    <Button floated="right" icon onClick={this.handleClose}><Icon color="red" name="close"/></Button>
+                  </Modal.Header>
+  
+                  <Modal.Content image>
+                    <Image size='medium' src={urlImage} />
+                    <Modal.Description>
+                      <Header>Abstract</Header>
+                      <p> {abstract}</p>
+                    </Modal.Description>
+                  </Modal.Content>
+                </Modal>
+              </Item.Extra>
             </Item.Content>
           </Item>
     )
