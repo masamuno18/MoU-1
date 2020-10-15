@@ -159,7 +159,7 @@ class Register extends Component {
                 value={institute}
               />
 
-              <Header as="h3">Designation <span style={{color: "red"}}>*</span></Header>
+              <Header as="h3">Student/ Postdoc/ Faculty <span style={{color: "red"}}>*</span></Header>
               <Form.Group inline id="fg">
                 
               <Form.Field
@@ -175,9 +175,9 @@ class Register extends Component {
                 control={Radio}
                 as="h1"
                 name="designation"
-                label='Post. Doc.'
-                value='Post. Doc.'
-                checked={designation === 'Post. Doc.'}
+                label='Postdoc'
+                value='Postdoc'
+                checked={designation === 'Postdoc'}
                 onChange={this.handleChange}
               />
               <Form.Field

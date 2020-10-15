@@ -68,12 +68,12 @@ class Attendees extends Component {
         <Loader active={isLoading} inline='centered' />
 
         {!isLoading && 
-        <Table striped  size="large" padded stackable>
+        <Table striped inverted  size="large" padded stackable>
 
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell width="5">Name</Table.HeaderCell>
-              <Table.HeaderCell width="4">Student/ Post Doc/ Faculty</Table.HeaderCell>
+              <Table.HeaderCell width="4">Student/ Postdoc/ Faculty</Table.HeaderCell>
               <Table.HeaderCell>Institute</Table.HeaderCell>
             </Table.Row>
           </Table.Header>

@@ -29,11 +29,11 @@ class MainView extends Component {
 
               <div className="mainHeader">
                 <h1 size="huge" className='h1'>Mysteries of the Universe </h1>
+                <p className="date">(Oct 17 to Nov 27, 2020)</p>
                 <h2 className='h2' id="h2">
                   Presented by Institute Lecture Series committee, in collaboration with the IIT Roorkee Chapter of the Indian Physics Association
                   and the Student Technical Council (The Physics and Astronomy Club)
                 </h2>
-                <h1 className="date">(Oct 17 to Nov 27, 2020)</h1>
               </div>
 
               <Link
@@ -43,7 +43,7 @@ class MainView extends Component {
                 duration={500}
               >
                 <div className="arrow bounce start">
-                <a className="fa fa-arrow-down fa-3x"></a>
+                <a className="fa fa-arrow-down fa-3x" id="ba"></a>
               </div>
               </Link>
               
@@ -72,7 +72,6 @@ class MainView extends Component {
                   abstract={abstractJS}
                   urlPoster={require('../resources/pdfs/JS.pdf')}
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
-                  urlZOOM="##"
                 />
 
                 <Speaker
@@ -84,7 +83,6 @@ class MainView extends Component {
                   urlPoster={require('../resources/pdfs/EW.pdf')}
                   abstract={abstractEW}
                   urlInfo="http://www.sns.ias.edu/witten"
-                  urlZOOM="##"
                 />
 
                 <Speaker
@@ -114,7 +112,7 @@ class MainView extends Component {
                   description="Eberly Professor of Physics and the Director of the Institute for Gravitational Physics and Geometry at Pennsylvania State University"
                   time="Nov-28 8:00 PM IST (UTC + 5:30)"
                   abstract={abstractAA}
-                  urlInfo="http://igpg.gravity.psu.edu/people/Ashtekar/cv.html"
+                  urlInfo="http://igpg.gravity.psu.edu/people/Ashtekar/index.html"
                 />
 
               </Item.Group>

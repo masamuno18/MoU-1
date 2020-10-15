@@ -1,7 +1,7 @@
 import React from 'react'
 import './App.css'
 import 'semantic-ui-css/semantic.min.css'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 
 import MainView from './views/mainview.js'
 import Register from './views/form.js'

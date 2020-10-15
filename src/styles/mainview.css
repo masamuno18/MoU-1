@@ -23,9 +23,9 @@
 
 .h1{
   color: rgb(255, 255, 255) !important;
-  font-family:'Montserrat', sans-serif;;
+  font-family:'Montserrat', sans-serif;
   text-decoration:none;
-  font-size: 2.5em;
+  font-size: 70px;
 }
 .h2{
   color: white !important;
@@ -33,6 +33,7 @@
   text-decoration:none;
   font-size:30px;
   font-weight: 300;
+  padding-top: 1%;
 }
 .date{
   color: white !important;
@@ -134,4 +135,19 @@ a { color: white; text-decoration: none; }
 
 #contact{
   color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .h1{
+    font-size: 4opx;
+  }
+  .h2{
+    font-size: 20px;
+  }
+  .date{
+    font-size: 18px;
+  }
+  #ba{
+    font-size: 18px;
+  }
 }
