@@ -8,6 +8,7 @@ import {
   Image,
 
 } from 'semantic-ui-react'
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import Speaker from '../components/speaker.js'
 import '../styles/mainview.css'
@@ -31,9 +32,17 @@ class MainView extends Component {
                 <Header sub className="white">(Oct 17 to Nov 27, 2020)</Header>
               </div>
 
-              <div className="arrow bounce start">
-                <a className="fa fa-arrow-down fa-3x" href="#speaker"></a>
+              <Link
+                to="speaker"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
+                <div className="arrow bounce start">
+                <a className="fa fa-arrow-down fa-3x"></a>
               </div>
+              </Link>
+              
 
             </Container>
           </div>
