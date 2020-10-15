@@ -26,6 +26,7 @@ class Speaker extends Component {
 
   handleZOOM = e => {
     this.handleClose()
+    window.open(this.props.urlZOOM, "_blank")
   }
 
   handlePoster = e => {
