@@ -9,7 +9,9 @@ import {
   Container,
   Divider,
   Image,
-  Card
+  Card,
+  Item,
+  Label
 } from 'semantic-ui-react'
 import axios from 'axios'
 import '../styles/mainview.css'
@@ -28,8 +30,131 @@ class MainView extends Component {
           <div className="centered">Mysteries Of Universe</div>
           <div className="c2">(Oct 23 to Nov 28)</div>
           <div className="arrow bounce start">
-           <a className="fa fa-arrow-down fa-2x" href="#lecture"></a>
+           <a className="fa fa-arrow-down fa-2x" href="#speaker"></a>
           </div>
+        </div>
+
+        <div class="speaker" id="speaker">
+          
+          <Container >
+
+            <div id="esh">
+              <Header as="h1" size="huge">
+                Event Speakers
+              </Header>
+            </div>
+            
+
+            <Segment padded textAlign="left" color="teal"> 
+              <Item.Group divided>
+                <Item>
+                  <Item.Image src={urlEW}/>
+                  
+                  <Item.Content verticalAlign="middle">
+
+                    <Item.Header>Edward Witten</Item.Header>
+                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
+
+                    <Item.Description>
+                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
+                    </Item.Description>
+
+                    <Item.Extra>
+                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
+                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
+                      <Button inverted color="purple" floated='right' content="View Poster"/>
+                    </Item.Extra>
+                    
+                  </Item.Content>
+                </Item>
+
+                <Item>
+                  <Item.Image src={urlEW}/>
+                  
+                  <Item.Content verticalAlign="middle">
+
+                    <Item.Header>Edward Witten</Item.Header>
+                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
+                    
+                    <Item.Description>
+                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
+                    </Item.Description>
+
+                    <Item.Extra>
+                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
+                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
+                      <Button inverted color="purple" floated='right' content="View Poster"/>
+                    </Item.Extra>
+                    
+                  </Item.Content>  
+                </Item>
+
+                <Item>
+                  <Item.Image src={urlEW}/>
+                  
+                  <Item.Content verticalAlign="middle">
+
+                    <Item.Header>Edward Witten</Item.Header>
+                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
+
+                    <Item.Description>
+                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
+                    </Item.Description>
+
+                    <Item.Extra>
+                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
+                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
+                      <Button inverted color="purple" floated='right' content="View Poster"/>
+                    </Item.Extra>
+                    
+                  </Item.Content>
+                </Item>
+
+                <Item>
+                  <Item.Image src={urlEW}/>
+                  
+                  <Item.Content verticalAlign="middle">
+
+                    <Item.Header>Edward Witten</Item.Header>
+                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
+
+                    <Item.Description>
+                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
+                    </Item.Description>
+
+                    <Item.Extra>
+                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
+                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
+                      <Button inverted color="purple" floated='right' content="View Poster"/>
+                    </Item.Extra>
+                    
+                  </Item.Content>
+                </Item>
+
+                <Item>
+                  <Item.Image src={urlEW}/>
+                  
+                  <Item.Content verticalAlign="middle">
+
+                    <Item.Header>Edward Witten</Item.Header>
+                    <Item.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Item.Meta>
+
+                    <Item.Description>
+                      Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution".
+                    </Item.Description>
+
+                    <Item.Extra>
+                      <Label color="teal" icon='clock' content='Oct-23 6:00 PM IST (UTC + 5:30)' />
+                      <Button inverted color="green" floated='right' content="ZOOM LINK"/>
+                      <Button inverted color="purple" floated='right' content="View Poster"/>
+                    </Item.Extra>
+                    
+                  </Item.Content>
+                </Item>
+              </Item.Group>
+            </Segment>
+          </Container>
+          
         </div>
         
         <div class="main">
@@ -44,77 +169,7 @@ class MainView extends Component {
            knowledgeable experience of the profound and exciting aspects of theoretical physics and Cosmology.
            </p><br></br><br></br>
         
-          <Container textAlign="center">
-            <Card.Group textAlign ="center" itemsPerRow="4" stackable>
-              <Card
-                meta='Friend'
-                description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-              >
-                <Image src={urlEW} wrapped ui={false} />
-                <Card.Content>
-                  <Card.Header>Edward Witten</Card.Header>
-                  <Card.Meta>2-DIMENSIONAL GRAVITY AND VOLUMES OF MODULI SPACES</Card.Meta>
-                  <Card.Description>
-                    <p><strong>Oct 23 6 PM IST</strong></p>
-                  <p>
-                  Field Medalist (1990), Fundamental Physics laureate (2012), led the "Second Superstring Revolution". Widely regarded as the "successor of Einstein", Professor Witten's path-breaking treasure trove of contributions to theoretical Physics have led to important developments in pure Mathematics.
-                  </p>
-                  </Card.Description>
-                </Card.Content>
-                <Card.Content extra>
-                  <div className="ui two buttons">
-                  <Button fluid basic color='green'>
-                    ZOOM link
-                  </Button>
-                  <Button fluid basic color='blue'>
-                    View Poster
-                  </Button>
-                  </div>
-                  
-                </Card.Content>
-
-              </Card>
-              <Card
-                meta='Friend'
-                description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-              >
-                <Image src={urlCV} wrapped ui={false} />
-                <Card.Content>
-                  <Card.Header>Cumrun Vafa</Card.Header>
-                  <Card.Meta>Co-Worker</Card.Meta>
-                  <Card.Description>
-                    Matthew is a pianist living in Nashville.
-                  </Card.Description>
-                </Card.Content>
-              </Card>
-              <Card
-                meta='Friend'
-                description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-              >
-                <Image src={urlJM} wrapped ui={false} />
-                <Card.Content>
-                  <Card.Header>Juan Maldacena</Card.Header>
-                  <Card.Meta>Co-Worker</Card.Meta>
-                  <Card.Description>
-                    Matthew is a pianist living in Nashville.
-                  </Card.Description>
-                </Card.Content>
-              </Card>
-              <Card
-                meta='Friend'
-                description='Elliot is a sound engineer living in Nashville who enjoys playing guitar and hanging with his cat.'
-              >
-                <Image src={urlAA} wrapped ui={false} />
-                <Card.Content>
-                  <Card.Header>Abhay Ashtekar</Card.Header>
-                  <Card.Meta>Co-Worker</Card.Meta>
-                  <Card.Description>
-                    Matthew is a pianist living in Nashville.
-                  </Card.Description>
-                </Card.Content>
-              </Card>
-            </Card.Group>
-          </Container>
+          
           </div>
           
         </div>
