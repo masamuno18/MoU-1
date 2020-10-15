@@ -4,14 +4,20 @@ import {
   Segment,
   Container,
   Item,
+  Label, 
+  GridColumn,
+  Grid,
+  Image,
+  Divider
 } from 'semantic-ui-react'
 
 import Speaker from '../components/speaker.js'
 import '../styles/mainview.css'
 
-import {urlAA, urlCV, urlEW, urlJM, urlbh, urlJS} from "../secrets/images.js"
+import {urlAA, urlCV, urlEW, urlJM, urlbh, urlJS, urliitr} from "../secrets/images.js"
 import {abstractJS, abstractCV, abstractJM} from "../secrets/abstract.js"
  
+
 class MainView extends Component {
 
     render () {
@@ -29,13 +35,13 @@ class MainView extends Component {
               </div>
 
               <div className="arrow bounce start">
-                <a className="fa fa-arrow-down fa-2x" href="#speaker"></a>
+                <a className="fa fa-arrow-down fa-3x" href="#speaker"></a>
               </div>
 
             </Container>
           </div>
 
-        <div class="speaker" id="speaker">
+         <div class="speaker" id="speaker">
           <Container >
 
             <div id="esh">
@@ -92,24 +98,48 @@ class MainView extends Component {
 
               </Item.Group>
             </Segment>
-          </Container>
-        </div>
+           </Container>
+          </div>
         
-        <div className="about">
-          <Header as="h1" size="huge">Brief about the lectures </Header>
-          <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
-          Theoretical High Energy Physics and Cosmology, dubbed as <em>The 
-          Institute Lecture MOU(Mysteries of Universe)</em>.</p> <p class="desp"> The lectures will be 
-          the source of immense information covering from Gravity to Black Holes to
+         <div className="about">
+           <Header as="h1" id="#lecture" size="huge" color="purple">Brief about the lectures </Header>
+           <p class="desp">Indian Physics Association (IPA), IIT Roorkee Chapter along with Physics and Astronomy Club, IIT Roorkee heartily invites you to a series of four lectures in the field of 
+           Theoretical High Energy Physics and Cosmology, dubbed as <em>The 
+           Institute Lecture MOU(Mysteries of Universe)</em>.</p> <p class="desp"> The lectures will be 
+           the source of immense information covering from Gravity to Black Holes to
            Gravitational Waves to Hawking Radiation and other related areas. In the lectures, you will be 
            interacting with some of the eminent physicists of our times. 
            With these lectures, you will join us as we go on for a beautiful and 
            knowledgeable experience of the profound and exciting aspects of theoretical physics and Cosmology.
            </p><br></br><br></br>
-        
+         </div>
           
-          </div>
-          
+         
+            <Segment padded inverted>
+              <Grid>
+                <Grid.Row>
+                  <Grid.Column width="4">
+                    <Image.Group size='small'>
+                      <Image src={urliitr}  circular />
+                      <Image src={require('./paaclogo.png')} circular />
+                    </Image.Group>
+                  
+                  </Grid.Column>
+                  
+                  
+                  <Grid.Column width="3" floated="right" textAlign="left" verticalAlign="middle">
+                    <Header as="h2" id="contact"> Contact</Header>
+                    <hr id="divi"/>
+                    <Header color="teal" as="a">aalok.mishra@ph.iitr.ac.in</Header>
+                    <Header color="teal" as="a"> paac@iitr.ac.in</Header>
+                  </Grid.Column>
+                </Grid.Row>
+
+              </Grid>
+              
+            </Segment>
+  
+
         </div>
       )
     }
