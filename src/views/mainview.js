@@ -106,7 +106,7 @@ class MainView extends Component {
                 />
 
                 <Speaker
-                  name="Abhay Ashtekhar"
+                  name="Abhay Ashtekar"
                   urlImage={require('../resources/images/AA.jpeg')}
                   title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
                   description="Eberly Professor of Physics and the Director of the Institute for Gravitational Physics and Geometry at Pennsylvania State University"
