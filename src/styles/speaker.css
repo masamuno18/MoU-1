@@ -1,0 +1,25 @@
+#zoom{
+  background-image:url("https://d24cgw3uvb9a9h.cloudfront.net/static/94085/image/thumb.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#ih{
+  width: 100%;
+}
+
+a :hover{
+  color: blue ;
+}
+
+
+a {
+  color: black;
+}
+
+@media only screen and (max-width: 600px) {
+  #time{
+    text-align: left !important;
+  }
+}

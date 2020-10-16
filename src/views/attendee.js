@@ -78,7 +78,7 @@ class Attendees extends Component {
             </Table.Row>
           </Table.Header>
           
-          <Table.Body onScroll={() => console.log("scroll")}>
+          <Table.Body>
           {data.reverse().map( (row) => (
             <Table.Row key={row._rowNumber}>
               <Table.Cell width="5">{row.Name}</Table.Cell>

@@ -70,9 +70,8 @@ class MainView extends Component {
                   description="Harold Brown Professor of Theoretical Physics at Caltech and one of the founding fathers of Superstring theory"
                   time="Oct-17 8:30 PM IST (UTC + 5:30)"
                   abstract={abstractJS}
-                  urlPoster={require('../resources/pdfs/JS.pdf')}
+                  urlPoster={require('../resources/images/JSP.jpeg')}
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
-                  urlY="##"
                 />
 
                 <Speaker
@@ -81,7 +80,7 @@ class MainView extends Component {
                   title="2-Dimensional gravity and volumes of moduli spaces"
                   description="Field Medalist and Charles Simonyi Professor in the School of Natural Sciences at the Institute for Advanced Study, Princeton "
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
-                  urlPoster={require('../resources/pdfs/EW.pdf')}
+                  urlPoster={require('../resources/images/EWP.jpeg')}
                   abstract={abstractEW}
                   urlInfo="http://www.sns.ias.edu/witten"
                 />

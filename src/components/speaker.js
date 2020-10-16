@@ -6,9 +6,11 @@ import {
   Item,
   Label,
   Modal,
-  Icon
+  Icon,
+  Grid
 } from 'semantic-ui-react'
 
+import "../styles/speaker.css"
 
 class Speaker extends Component {
 
@@ -25,12 +27,10 @@ class Speaker extends Component {
   handleClose = () => this.setState({ modalOpen: '' })
 
   handleZOOM = e => {
-    this.handleClose()
     window.open(this.props.urlZOOM, "_blank")
   }
 
   handlePoster = e => {
-    this.handleClose()
     window.open(this.props.urlPoster, "_blank")
   }
 
@@ -52,40 +52,65 @@ class Speaker extends Component {
         <Item.Image src={urlImage}/>
           <Item.Content verticalAlign="middle">
 
-              <Item.Header as="a" onClick={this.handleInfo}>{name}</Item.Header>
+              <Item.Header id="ih">
+                <Grid columns="2" stackable>
+                  <Grid.Row>
+                    <Grid.Column >
+                    <a id="hh" onClick={this.handleInfo}>{name}</a>
+                    </Grid.Column>
+                    <Grid.Column id="time"  textAlign="right" floated="right">
+                    <Label color="teal" icon='clock' content={time} />
+                    </Grid.Column>
+                  </Grid.Row>
+                </Grid>
+                
+                
+                </Item.Header>
               <Item.Meta>{title}</Item.Meta>
               <Item.Description>{description}</Item.Description>
 
               <Item.Extra>
-                <Label color="teal" icon='clock' content={time} />
-                <Button inverted disabled={!urlZOOM} color="green" floated='right' content="ZOOM LINK" onClick={this.handleZOOM}/>
-                <Button inverted disabled={!urlPoster} color="purple" floated='right' content="View Poster" onClick={this.handlePoster}/>
-                <Button icon  size='tiny' color="youtube" icon="youtube" onClick={this.handleY}>
-                  </Button>
-                
+                <Grid stackable columns="3">
+                  <Grid.Row>
 
-                <Modal
-                  trigger={<Button inverted  color="orange" floated='right' content="View Abstract" onClick={this.handleOpen}/>}
-                  open={this.state.modalOpen === name}
-                  onClose={this.handleClose}
-                >
+                    <Grid.Column>
+                      <Button.Group fluid>
+                        <Button size="small" color="teal" content={urlZOOM&&"ZOOM"} disabled={urlZOOM} onClick={this.handleZOOM} id="zoom"></Button>
+                        <Button.Or />
+                        <Button size="small" icon disabled={urlY} color="youtube" onClick={this.handleY}><Icon size="large" name="youtube"/></Button>
+                      </Button.Group>
+                    </Grid.Column>
+
+                    <Grid.Column stretched floated="right">
+                      <Button inverted disabled={!urlPoster} color="purple" content="View Poster" onClick={this.handlePoster}/>
+                    </Grid.Column>
+                
+                    <Modal
+                      trigger={<Grid.Column stretched floated="right"><Button floated="right" inverted  color="orange" content="View Abstract" onClick={this.handleOpen}/></Grid.Column>}
+                      open={this.state.modalOpen === name}
+                      onClose={this.handleClose}
+                    >
                   
-                  <Modal.Header>
-                    {title}
-                    <Button floated="right" icon onClick={this.handleClose}><Icon color="red" name="close"/></Button>
-                  </Modal.Header>
-  
-                  <Modal.Content image>
-                    <Image size='medium' src={urlImage} />
-                    <Modal.Description>
-                      <Header>Abstract</Header>
-                      <p> {abstract}</p>
-                    </Modal.Description>
-                  </Modal.Content>
-                </Modal>
+                      <Modal.Header>
+                        {title}
+                        <Button floated="right" icon onClick={this.handleClose}><Icon color="red" name="close"/></Button>
+                      </Modal.Header>
+    
+                      <Modal.Content image>
+                        <Image size='medium' src={urlImage} />
+                        <Modal.Description>
+                          <Header>Abstract</Header>
+                          <p> {abstract}</p>
+                        </Modal.Description>
+                      </Modal.Content>
+
+                    </Modal>
+
+                  </Grid.Row>
+                </Grid>
               </Item.Extra>
-            </Item.Content>
-          </Item>
+          </Item.Content>
+        </Item>
     )
   }
 }

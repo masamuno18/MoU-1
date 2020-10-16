@@ -59,7 +59,7 @@
 @primary: #fd6b21; /* Orange*/
 
 body { background: @bg;}
-a { color: white; text-decoration: none; }
+.fa-arrow-down { color: white; text-decoration: none; }
 
 .arrow {
   text-align: center;
