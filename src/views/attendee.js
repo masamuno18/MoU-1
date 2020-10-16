@@ -78,7 +78,7 @@ class Attendees extends Component {
             </Table.Row>
           </Table.Header>
           
-          {data.map( (row) => (
+          {data.reverse().map( (row) => (
             <Table.Body key={row._rowNumber}>
             <Table.Row>
               <Table.Cell width="5">{row.Name}</Table.Cell>

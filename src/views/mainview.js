@@ -90,7 +90,7 @@ class MainView extends Component {
                   urlImage={require('../resources/images/CV.jpg')}
                   title="Puzzles to Unravel the Universe"
                   description="Hollis Professor of Mathematics and Natural Philosophy at Harvard"
-                  time="Oct-23 6:00 PM IST (UTC + 5:30)"
+                  time="Oct-31 6:00 PM IST (UTC + 5:30)"
                   abstract={abstractCV}
                   urlInfo="https://www.physics.harvard.edu/people/facpages/vafa"
                 />
@@ -98,7 +98,7 @@ class MainView extends Component {
                 <Speaker
                   name="Juan Maldacena"
                   urlImage={require('../resources/images/JM.jpg')}
-                  title="Black holes and the information in Hawking radiation"
+                  title="Black holes and the structure of spacetime"
                   description="Carl P. Feinberg Professor in the School of Natural Sciences at the Institute for Advanced Study, Princeton"
                   time="Nov-21 6:00 PM IST (UTC + 5:30)"
                   abstract={abstractJM}
