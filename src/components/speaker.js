@@ -37,9 +37,14 @@ class Speaker extends Component {
   handleInfo = e => {
     window.open(this.props.urlInfo, "_blank")
   }
+
+  handleY = e => {
+    window.open(this.props.urlY, "_blank")
+  }
+
   render() {
 
-    const {name, urlImage, title, description, time, abstract, urlPoster, urlZOOM} = this.props;
+    const {name, urlImage, title, description, time, abstract, urlPoster, urlZOOM, urlY} = this.props;
 
     return(
 
@@ -55,6 +60,9 @@ class Speaker extends Component {
                 <Label color="teal" icon='clock' content={time} />
                 <Button inverted disabled={!urlZOOM} color="green" floated='right' content="ZOOM LINK" onClick={this.handleZOOM}/>
                 <Button inverted disabled={!urlPoster} color="purple" floated='right' content="View Poster" onClick={this.handlePoster}/>
+                <Button icon  size='tiny' color="youtube" icon="youtube" onClick={this.handleY}>
+                  </Button>
+                
 
                 <Modal
                   trigger={<Button inverted  color="orange" floated='right' content="View Abstract" onClick={this.handleOpen}/>}

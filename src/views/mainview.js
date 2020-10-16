@@ -14,7 +14,7 @@ import Speaker from '../components/speaker.js'
 import '../styles/mainview.css'
 import {abstractJS, abstractCV, abstractJM, abstractEW, abstractAA} from "../secrets/abstract.js"
 
- 
+  
 
 class MainView extends Component {
 
@@ -72,6 +72,7 @@ class MainView extends Component {
                   abstract={abstractJS}
                   urlPoster={require('../resources/pdfs/JS.pdf')}
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
+                  urlY="##"
                 />
 
                 <Speaker

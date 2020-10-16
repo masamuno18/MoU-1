@@ -70,7 +70,7 @@ class Attendees extends Component {
         {!isLoading && 
         <Table striped inverted  size="large" padded stackable>
 
-          <Table.Header>
+          <Table.Header id="tabhead">
             <Table.Row>
               <Table.HeaderCell width="5">Name</Table.HeaderCell>
               <Table.HeaderCell width="4">Student/ Postdoc/ Faculty</Table.HeaderCell>
@@ -78,18 +78,28 @@ class Attendees extends Component {
             </Table.Row>
           </Table.Header>
           
+          <Table.Body onScroll={() => console.log("scroll")}>
           {data.reverse().map( (row) => (
-            <Table.Body key={row._rowNumber}>
-            <Table.Row>
+            <Table.Row key={row._rowNumber}>
               <Table.Cell width="5">{row.Name}</Table.Cell>
               <Table.Cell width="4">{row.Designation}</Table.Cell>
               <Table.Cell>{row.Institute}</Table.Cell>
             </Table.Row>
-            </Table.Body>
           ))}
+          </Table.Body>
+
+          <Table.Footer>
+            <Table.Row id="reg">
+              <Table.Cell>
+                {data.length} registrations so far!
+              </Table.Cell>
+            </Table.Row>
+          </Table.Footer>
 
         </Table>
+        
         }
+        
       </Container>
 
       </div>
