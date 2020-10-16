@@ -151,6 +151,10 @@ body { background: @bg;}
     font-size: 18px;
   }
   .about{
+    font-size: 1.5em;
     background-image: none;
+  }
+  #esh{
+    font-size: 1.5em;
   }
 }

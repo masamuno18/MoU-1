@@ -1,8 +1,5 @@
-#zoom{
-  background-image:url("https://d24cgw3uvb9a9h.cloudfront.net/static/94085/image/thumb.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+#zoom {
+  margin-bottom: 5% !important;
 }
 
 #ih{

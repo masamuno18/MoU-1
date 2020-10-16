@@ -75,16 +75,18 @@ class Speaker extends Component {
 
                     
 
-                    <Grid.Column stretched >
-                      <Button.Group fluid>
+                    
+                     <Grid.Column floated="left">
+
+                   
 
                       
-                      <Button disabled={!urlPoster} color="purple" content="View Poster" onClick={this.handlePoster}/>
+                      <Button inverted disabled={!urlPoster} color="purple" content="View Poster" onClick={this.handlePoster}/>
                       {/* <Button.Or text="&"/> */}
                    
                 
                     <Modal
-                      trigger={<Button floated="right"  color="orange" content="View Abstract" onClick={this.handleOpen}/>}
+                      trigger={<Button inverted floated="right" color="orange" content="View Abstract" onClick={this.handleOpen}/>}
                       open={this.state.modalOpen === name}
                       onClose={this.handleClose}
                     >
@@ -103,16 +105,19 @@ class Speaker extends Component {
                       </Modal.Content>
 
                     </Modal>
-                    </Button.Group>
+                    
                     </Grid.Column>
 
-                    <Grid.Column floated="right" stretched>
-                      <Button.Group fluid>
-                        <Button size="small" color="teal" content={urlZOOM&&"ZOOM"} disabled={urlZOOM} onClick={this.handleZOOM} id="zoom"></Button>
-                        <Button.Or />
-                        <Button size="small" icon disabled={urlY} color="youtube" onClick={this.handleY}><Icon size="large" name="youtube"/></Button>
-                      </Button.Group>
-                    </Grid.Column>
+                      <Grid.Column floated="right">
+                      <Button inverted color="blue" disabled={!urlZOOM} onClick={this.handleZOOM}><span id="zoom">ZOOM Link</span></Button>
+                        
+                        <Button floated="right" inverted disabled={!urlY} color="red" onClick={this.handleY} content="Youtube Link"/>
+
+                      </Grid.Column>
+                      
+                        
+                      
+                    
 
                   </Grid.Row>
                 </Grid>

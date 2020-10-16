@@ -91,6 +91,7 @@ class MainView extends Component {
                   title="Puzzles to Unravel the Universe"
                   description="Hollis Professor of Mathematics and Natural Philosophy at Harvard"
                   time="Oct-31 6:00 PM IST (UTC + 5:30)"
+                  urlPoster={require('../resources/images/CVP.jpeg')}
                   abstract={abstractCV}
                   urlInfo="https://www.physics.harvard.edu/people/facpages/vafa"
                 />
@@ -101,6 +102,7 @@ class MainView extends Component {
                   title="Black holes and the structure of spacetime"
                   description="Carl P. Feinberg Professor in the School of Natural Sciences at the Institute for Advanced Study, Princeton"
                   time="Nov-21 6:00 PM IST (UTC + 5:30)"
+                  urlPoster={require('../resources/images/JMP.jpg')}
                   abstract={abstractJM}
                   urlInfo="https://www.ias.edu/scholars/maldacena"
                 />
@@ -111,6 +113,7 @@ class MainView extends Component {
                   title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
                   description="Eberly Professor of Physics and the Director of the Institute for Gravitational Physics and Geometry at Pennsylvania State University"
                   time="Nov-28 8:00 PM IST (UTC + 5:30)"
+                  urlPoster={require('../resources/images/AAP.jpg')}
                   abstract={abstractAA}
                   urlInfo="http://igpg.gravity.psu.edu/people/Ashtekar/index.html"
                 />
