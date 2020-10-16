@@ -73,20 +73,18 @@ class Speaker extends Component {
                 <Grid stackable columns="3">
                   <Grid.Row>
 
-                    <Grid.Column>
-                      <Button.Group fluid>
-                        <Button size="small" color="teal" content={urlZOOM&&"ZOOM"} disabled={urlZOOM} onClick={this.handleZOOM} id="zoom"></Button>
-                        <Button.Or />
-                        <Button size="small" icon disabled={urlY} color="youtube" onClick={this.handleY}><Icon size="large" name="youtube"/></Button>
-                      </Button.Group>
-                    </Grid.Column>
+                    
 
-                    <Grid.Column stretched floated="right">
-                      <Button inverted disabled={!urlPoster} color="purple" content="View Poster" onClick={this.handlePoster}/>
-                    </Grid.Column>
+                    <Grid.Column stretched >
+                      <Button.Group fluid>
+
+                      
+                      <Button disabled={!urlPoster} color="purple" content="View Poster" onClick={this.handlePoster}/>
+                      {/* <Button.Or text="&"/> */}
+                   
                 
                     <Modal
-                      trigger={<Grid.Column stretched floated="right"><Button floated="right" inverted  color="orange" content="View Abstract" onClick={this.handleOpen}/></Grid.Column>}
+                      trigger={<Button floated="right"  color="orange" content="View Abstract" onClick={this.handleOpen}/>}
                       open={this.state.modalOpen === name}
                       onClose={this.handleClose}
                     >
@@ -105,6 +103,16 @@ class Speaker extends Component {
                       </Modal.Content>
 
                     </Modal>
+                    </Button.Group>
+                    </Grid.Column>
+
+                    <Grid.Column floated="right" stretched>
+                      <Button.Group fluid>
+                        <Button size="small" color="teal" content={urlZOOM&&"ZOOM"} disabled={urlZOOM} onClick={this.handleZOOM} id="zoom"></Button>
+                        <Button.Or />
+                        <Button size="small" icon disabled={urlY} color="youtube" onClick={this.handleY}><Icon size="large" name="youtube"/></Button>
+                      </Button.Group>
+                    </Grid.Column>
 
                   </Grid.Row>
                 </Grid>
