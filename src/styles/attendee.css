@@ -8,14 +8,7 @@
   height:100vh;
 }
 
-@media only screen and (max-width: 600px) {
-  .tableWrapper{
-    padding-top: 5vh;
-  }
-  #tabhead{
-    display: none;
-  }
-}
+
 /*---scroll---*/
 tbody {
   display: block;
@@ -44,4 +37,24 @@ tbody tr {
 
 #reg{
   font-size: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .tableWrapper{
+    padding-top: 5vh;
+    height: 100vh;
+  }
+  #tabhead{
+    display: none;
+  }
+
+  .atHeader{
+    padding-top: 10%;
+  }
+
+  tbody {
+    display: block;
+    height:53vh;
+    overflow: auto;
+  }
 }
