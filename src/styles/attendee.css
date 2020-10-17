@@ -11,7 +11,7 @@
 
 @media only screen and (max-width: 600px) {
   .tableWrapper{
-    padding-top: 15%;
+    padding-top: 5vh;
   }
   #tabhead{
     display: none;
@@ -20,7 +20,7 @@
 /*---scroll---*/
 tbody {
   display: block;
-  height:29em;
+  height:47vh;
   overflow: auto;
 }
 thead{
