@@ -111,14 +111,10 @@ class Speaker extends Component {
                       <Grid.Column floated="right">
                       <Button inverted color="blue" disabled={!urlZOOM} onClick={this.handleZOOM}><span id="zoom">ZOOM Link</span></Button>
                         
-                        <Button floated="right" inverted disabled={!urlY} color="red" onClick={this.handleY} content="Youtube Link"/>
+                        <Button floated="right" inverted disabled={!urlY} color="red" onClick={this.handleY} content="YouTube Link"/>
 
                       </Grid.Column>
                       
-                        
-                      
-                    
-
                   </Grid.Row>
                 </Grid>
               </Item.Extra>

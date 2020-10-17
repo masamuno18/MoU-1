@@ -31,8 +31,8 @@ class MainView extends Component {
                 <h1 size="huge" className='h1'>Mysteries of the Universe </h1>
                 <p className="date">(Oct 17 to Nov 27, 2020)</p>
                 <h2 className='h2' id="h2">
-                  Presented by Institute Lecture Series committee, in collaboration with the IIT Roorkee Chapter of the Indian Physics Association
-                  and the Student Technical Council (The Physics and Astronomy Club)
+                  Presented by Institute Lecture Series committee, in collaboration with the Indian Physics Association, Roorkee Chapter
+                  and the Student's Technical Council (The Physics and Astronomy Club)
                 </h2>
               </div>
 
@@ -72,6 +72,8 @@ class MainView extends Component {
                   abstract={abstractJS}
                   urlPoster={require('../resources/images/JSP.jpeg')}
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
+                  urlY="https://www.youtube.com/watch?v=TwayPGEXx1E"
+                  urlZOOM="https://zoom.us/j/98215179861"
                 />
 
                 <Speaker
@@ -112,7 +114,7 @@ class MainView extends Component {
                   urlImage={require('../resources/images/AA.jpeg')}
                   title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
                   description="Eberly Professor of Physics and the Director of the Institute for Gravitational Physics and Geometry at Pennsylvania State University"
-                  time="Nov-28 8:00 PM IST (UTC + 5:30)"
+                  time="Nov-27 8:00 PM IST (UTC + 5:30)"
                   urlPoster={require('../resources/images/AAP.jpg')}
                   abstract={abstractAA}
                   urlInfo="http://igpg.gravity.psu.edu/people/Ashtekar/index.html"
@@ -128,9 +130,8 @@ class MainView extends Component {
             <p className="desp">
             The Institute Lecture Series Committee, 
             in collaboration with the Students' Technical Council 
-            (the Physics and Astronomy Club, in particular) and the IIT Roorkee 
-            chapter of the Indian Physics Association, is delighted to bring you 
-            a bouquet of Mysteries of the Universe (MOU) online lecture series 
+            (the Physics and Astronomy Club, in particular) and the Indian Physics Association, Roorkee Chapter, 
+            is delighted to bring you a bouquet of Mysteries of the Universe (MOU) online lecture series 
             delivered by world renowned experts who are the founding fathers of our 
             efforts in understanding concepts like black holes, unification of forces, 
             origin of the universe and quantum gravity.
@@ -150,12 +151,12 @@ class MainView extends Component {
               <Grid stackable>
                 
                   <Grid.Column width="9" floated="left">
-                    <Image.Group size='small'>
-                      <Image src={require('../resources/images/iitrlogo.png')} title="IIT Roorkee"/>
-                      <Image src={require('../resources/images/Ipa.png')} title="Indian Physics Association, Roorkee Chapter"  />
-                      <Image src={require('../resources/images/wma.png')} title="Mysteries of Universe by Prof. Aalok Misra"/>
-                      <Image src={require('../resources/images/stclogo.png')} title="Student Technical Council, IITR"  />
-                      <Image src={require('../resources/images/paaclogo.png')} circular title="Physics and Astronomy Club, IITR"/>
+                    <Image.Group padded>
+                      <Image size="tiny" src={require('../resources/images/iitrlogo.jpg')} circular title="IIT Roorkee"/>
+                      <Image size="small" src={require('../resources/images/Ipa.png')} title="Indian Physics Association, Roorkee Chapter"  />
+                      <Image size="small" src={require('../resources/images/wma.png')} title="Mysteries of Universe by Prof. Aalok Misra"/>
+                      <Image size="small" src={require('../resources/images/stclogo.png')} title="Student's Technical Council, IITR"  />
+                      <Image size="small" src={require('../resources/images/paaclogo.png')} circular title="Physics and Astronomy Club, IITR"/>
                     </Image.Group>
                   
                   </Grid.Column>
@@ -178,8 +179,6 @@ class MainView extends Component {
               </Grid>
               
             </Segment>
-  
-
         </div>
       )
     }
