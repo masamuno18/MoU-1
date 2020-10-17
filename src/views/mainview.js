@@ -73,7 +73,8 @@ class MainView extends Component {
                   urlPoster={require('../resources/images/JSP.jpeg')}
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
                   urlY="https://www.youtube.com/watch?v=TwayPGEXx1E"
-                  urlZOOM="https://zoom.us/j/98215179861"
+                  urlF="j"
+                  
                 />
 
                 <Speaker
