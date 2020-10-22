@@ -34,12 +34,12 @@ export const abstractEW = "Since it is difficult to understand gravity at the qu
   have sought understanding from simpler models in low dimensions. In this talk, I will explain how a simple \
   model of quantum gravity in two dimensions leads to the study of the volumes of the moduli spaces of Riemann surfaces."
 
-export const abstractAA = "Black Holes, Big Bang and Gravitational Waves now appear as compelling - even obvious - \
-  consequences of general relativity. This wide-spread acceptance is reflected in the numerous recent Nobel prizes, \
-  particularly the 2018 prize for gravitational waves and 2020 prize for black holes. Therefore it may seem surprising \
-  that none of these ideas were readily accepted. Not only was there considerable debate, but in fact leading figures \
-  were often arguing on what turned out to be the `wrong side' of history. These developments provide excellent lessons \
-  for younger researchers on how science unfolds. Paradigm shifts in science occur when younger researchers have the \
-  courage not to accept ideas merely because they are mainstream; patience to systematically develop novel avenues they \
-  deeply believe in; and maturity to accept that a variety of factors - not all logical or even science related - can \
-  drive or slowdown scientific progress."
+export const abstractAA = "Black Holes, Big Bang and Gravitational Waves now appear as compelling – even \
+obvious – consequences of general relativity. This wide-spread acceptance is reflected in the numerous recent \
+Nobel prizes, particularly the 2018 prize for gravitational waves and 2020 prize for black holes. Therefore \
+it may seem surprising that none of these ideas were readily accepted. Not only was there considerable debate, \
+but in fact leading figures were often arguing on what turned out to be the ‘wrong side’ of history. These developments \
+provide excellent lessons for younger researchers on how science unfolds. Paradigm shifts in science occur when younger \
+researchers have the courage not to accept ideas merely because they are mainstream; patience to systematically develop \
+novel avenues they deeply believe in; and maturity to accept that a variety of factors – not all logical or even science \
+related – can drive or slowdown scientific progress."

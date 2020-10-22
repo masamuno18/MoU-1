@@ -73,7 +73,7 @@ class MainView extends Component {
                   urlPoster={require('../resources/images/JSP.jpeg')}
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
                   urlY="https://www.youtube.com/watch?v=TwayPGEXx1E"
-                  urlF="https://forms.gle/2evUTfACQRU3yPdQ8"
+                  urlPpt={require('../resources/PPTs/JS.pdf')}
                   
                 />
 
@@ -114,7 +114,7 @@ class MainView extends Component {
                   name="Abhay Ashtekar"
                   urlImage={require('../resources/images/AA.jpeg')}
                   title="Black Holes, Big Bang and Gravitational Waves: Illustrations of Paradigm Shifts in Fundamental Science"
-                  description="Eberly Professor of Physics and the Director of the Institute for Gravitational Physics and Geometry at Pennsylvania State University"
+                  description="Director, Institute for Gravitation & the Cosmos; Evan Pugh Professor of Physics; Holder, Eberly Chair"
                   time="Nov-27 8:00 PM IST (UTC + 5:30)"
                   urlPoster={require('../resources/images/AAP.jpg')}
                   abstract={abstractAA}

@@ -42,13 +42,13 @@ class Speaker extends Component {
     window.open(this.props.urlY, "_blank")
   }
 
-  handleF = e => {
-    window.open(this.props.urlF, "_blank")
+  handlePpt = e => {
+    window.open(this.props.urlPpt, "_blank")
   }
 
   render() {
 
-    const {name, urlImage, title, description, time, abstract, urlPoster, urlZOOM, urlY, urlF} = this.props;
+    const {name, urlImage, title, description, time, abstract, urlPoster, urlZOOM, urlY, urlPpt} = this.props;
 
     return(
 
@@ -113,8 +113,8 @@ class Speaker extends Component {
                     </Grid.Column>
 
                       <Grid.Column floated="right">
-                        {urlF && <Button floated="left" inverted color="green" onClick={this.handleF} content="Feedback"/>}
-                        {!urlF && <Button inverted color="blue" disabled={!urlZOOM} onClick={this.handleZOOM} content="ZOOM Link"/>}
+                        {urlPpt && <Button floated="left" inverted color="green" onClick={this.handlePpt} content="Lecture File"/>}
+                        {!urlPpt && <Button inverted color="blue" disabled={!urlZOOM} onClick={this.handleZOOM} content="ZOOM Link"/>}
                         <Button floated="right" inverted disabled={!urlY} color="red" onClick={this.handleY} content="YouTube Link"/>
 
                       </Grid.Column>
