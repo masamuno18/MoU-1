@@ -81,11 +81,13 @@ class MainView extends Component {
                   name="Edward Witten"
                   urlImage={require('../resources/images/EW.jpg')}
                   title="2-Dimensional gravity and volumes of moduli spaces"
-                  description="Field Medalist and Charles Simonyi Professor in the School of Natural Sciences at the Institute for Advanced Study, Princeton "
+                  description="Fields Medalist and Charles Simonyi Professor in the School of Natural Sciences at the Institute for Advanced Study, Princeton "
                   time="Oct-23 6:00 PM IST (UTC + 5:30)"
                   urlPoster={require('../resources/images/EWP.jpeg')}
                   abstract={abstractEW}
                   urlInfo="http://www.sns.ias.edu/witten"
+                  urlPpt={require('../resources/PPTs/EW.pdf')}
+                  urlY="https://youtu.be/DaRwdfMiR3w"
                 />
 
                 <Speaker
