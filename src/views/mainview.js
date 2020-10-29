@@ -74,8 +74,7 @@ class MainView extends Component {
                   urlInfo="http://pma.caltech.edu/people/john-h-schwarz"
                   urlY="https://www.youtube.com/watch?v=TwayPGEXx1E"
                   urlPpt={require('../resources/PPTs/JS.pdf')}
-                  
-                />
+                 />
 
                 <Speaker
                   name="Edward Witten"
