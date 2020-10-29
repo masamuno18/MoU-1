@@ -98,6 +98,7 @@ class MainView extends Component {
                   urlPoster={require('../resources/images/CVP.jpeg')}
                   abstract={abstractCV}
                   urlInfo="https://www.physics.harvard.edu/people/facpages/vafa"
+                  urlZOOM="https://zoom.us/j/92354937891?pwd=SnZSdHpKMENUYXdjb0RVUkNUcGVsdz09"
                 />
 
                 <Speaker
