@@ -46,8 +46,6 @@ class MainView extends Component {
                 <a className="fa fa-arrow-down fa-3x" id="ba"></a>
               </div>
               </Link>
-              
-
             </Container>
           </div>
 
@@ -98,7 +96,7 @@ class MainView extends Component {
                   urlPoster={require('../resources/images/CVP.jpeg')}
                   abstract={abstractCV}
                   urlInfo="https://www.physics.harvard.edu/people/facpages/vafa"
-                  urlZOOM="https://zoom.us/j/92354937891?pwd=SnZSdHpKMENUYXdjb0RVUkNUcGVsdz09"
+                  urlY="https://youtu.be/4gh3SZJajyY"
                 />
 
                 <Speaker
@@ -110,6 +108,7 @@ class MainView extends Component {
                   urlPoster={require('../resources/images/JMP.jpg')}
                   abstract={abstractJM}
                   urlInfo="https://www.ias.edu/scholars/maldacena"
+                  urlY='https://www.youtube.com/watch?v=OFpzfokko0M&ab_channel=InstituteLectureSeriesIITR'
                 />
 
                 <Speaker
@@ -121,6 +120,8 @@ class MainView extends Component {
                   urlPoster={require('../resources/images/AAP.jpg')}
                   abstract={abstractAA}
                   urlInfo="http://igpg.gravity.psu.edu/people/Ashtekar/index.html"
+                  urlPpt={require('../resources/PPTs/AA.pdf')}
+                  urlY='https://www.youtube.com/watch?v=LE5-NibKJ9s&feature=youtu.be'
                 />
 
               </Item.Group>
